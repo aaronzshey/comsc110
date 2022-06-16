@@ -1,9 +1,15 @@
 @copyrighted 1999 Valerie Colber
-Full Name and Student ID Number:  firstName lastName 1234567
+Full Name and Student ID Number:  Aaron Shey 2021742
 Course and section: COMSC-110-1199
-1. Objective (1 sentence brief description of what this will do):
-2. Requirements (any and all requirements organized by input, processing, 
-output, data):
+1. Objective: calculate how many days old I will be by the due date of this assignment.
+2. Requirements: 
+A. the number of years in which I've've lived, including your birth year and the current year
+B. the number of leap years in my life
+C. the number of days in my birth year before I was born, including my day of birth
+D. the number of days remaining in the current year after the due date for this lab, excluding that
+date. 
+
+
 INPUT (any data items to be input):
 -numYears
 -numLeapYears
@@ -15,12 +21,12 @@ PROCESSING (list of significant parts of the objective that will become
 the list of code blocks in program):
 1. data definitions
 2. user introduction
-3.calculate how many days old the user will be by due date
+3. calculate how many days old the user will be by due date
+4. output with labels
 
 
-OUTPUT (list of anything output: introduction, data items, labels, 
-prompts) :
-objective:
+OUTPUT (list of anything output: introduction, data items, labels, prompts) :
+objective: calculate how many days old I will be by the due date of this assignment
 author:
 instructions: make sure to input date of birth, due date, years lived, leap years, and days before birth, and days remaining after due date 
 - user introduction: introduction of objective, author, user 
@@ -32,7 +38,7 @@ instructions/rules
 Labels: 
 "DOB", date of birth
 "Due," due date
-"Age", and days (calculated) 
+"Age", in days (calculated) 
 
 DATA (list of all data items: definition, data type [integer, decimal, 
 text, single character], formatting, or any other specifications):
@@ -46,30 +52,89 @@ text, single character], formatting, or any other specifications):
 -days [int]: number of days between date of birth and due date
 
 3. Algorithm instructions (recipe)
-***data
-10 set yearsLived=18
-20 set nLeapYears=5
-30 set nDaysBefore=222
 
-***introduction
-30 output introduction: objective, author, instructions/rules
-***
-40
+set numYears=programmer input
+set numLeapYears=programmer input
+set numDaysBefore=programmer input
+set daysRemaining=programmer input
+set dateOfBirth=programmer input
+set dueDate=programmer input
+set days = 0
+
+output label "Date of Birth" 
+output dateOfBirth
+output label "Assignment Due Date"
+output dueDate
+output "Age"
+days = days + numYears * 365
+days = days + numLeapYears
+set days = days - daysRemaining
+set days = days - numDaysBefore
+output days
+
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and 
 expected results)
 Test case #1:
-jan 1 1999 
-Purpose:
-Inputs:
-Expected Results:
-...user introduction...
-10
+
+Purpose: Ensure the algorithm works as expected
+Inputs: Programmer inputs
+Expected Results: 6,521 days
+
+
+set numYears=19
+set numLeapYears=6
+set numDaysBefore=221
+set daysRemaining=199
+set dateOfBirth="Aug 9, 2004"
+set dueDate="Jun 16, 2022
+set days = 0
+
+output label "Date of Birth" 
+output dateOfBirth
+output label "Assignment Due Date"
+output dueDate
+output "Age"
+days = 0 + 19 * 365 = 65706935
+days = 6935 + 6 = 6941
+set days = 6941 - 199 = 6742
+set days = 6742 - 221 = 6521
+output days
+
 999 END
+
+
+
 Test case #2:
 
-due date: june 16 2022
-Purpose:
-Inputs:
-Expected Resu
+
+
+Purpose: Evaluate the algorithm with different values
+Inputs: Programmer inputs:
+Due date: Aug 07 2010
+Birthdate: Jan 1 1999
+Expected Results: 4,237 days
+
+set numYears=12
+set numLeapYears=3
+set numDaysBefore=0
+set daysRemaining=146
+set dateOfBirth="Aug 7, 2010"
+set dueDate="Jan 1, 1999"
+set days = 0
+
+output label "Date of Birth" 
+output dateOfBirth
+output label "Assignment Due Date"
+output dueDate
+output "Age"
+
+days = 0 + 12 * 365 = 4380
+days = 4380 + 3 = 4383
+set days = 4383 - 146 = 4238
+set days = 4238 - 1 = 4237
+output days
+999 END
+
+
