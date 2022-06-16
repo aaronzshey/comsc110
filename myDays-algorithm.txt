@@ -1,0 +1,50 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number:  firstName lastName 1234567
+Course and section: COMSC-110-1199
+1. Objective (1 sentence brief description of what this will do):
+2. Requirements (any and all requirements organized by input, processing, 
+output, data):
+INPUT (any data items to be input):
+-
+PROCESSING (list of significant parts of the objective that will become 
+the list of code blocks in program):
+1. data definitions
+2. user introduction
+3.
+OUTPUT (list of anything output: introduction, data items, labels, 
+prompts) :
+- user introduction: introduction of objective, author, user 
+instructions/rules
+-
+DATA (list of all data items: definition, data type [integer, decimal, 
+text, single character], formatting, or any other specifications):
+
+-numYears [int]: the number of years in which you've lived, including your birth year and the current year
+-numLeapYears [int]: the number of leap years in your life
+-numDaysofBirthYear [int]: the number of days in your birth year before you were born, including your day of birth
+-daysRemaining [int]: the number of days remaining in the current year after the due date for this lab, excluding that date. 
+
+
+
+3. Algorithm instructions (recipe)
+***data
+10 set ...
+20
+***introduction
+30 output introduction: objective, author, instructions/rules
+***
+40
+999 END
+4. Test cases (list purpose of each test case, any input values, and 
+expected results)
+Test case #1:
+Purpose:
+Inputs:
+Expected Results:
+...user introduction...
+10
+999 END
+Test case #2:
+Purpose:
+Inputs:
+Expected Resu
