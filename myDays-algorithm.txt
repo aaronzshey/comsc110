@@ -5,17 +5,35 @@ Course and section: COMSC-110-1199
 2. Requirements (any and all requirements organized by input, processing, 
 output, data):
 INPUT (any data items to be input):
--
+-numYears
+-numLeapYears
+-daysBeforeBirth
+-daysRemaining
+
+
 PROCESSING (list of significant parts of the objective that will become 
 the list of code blocks in program):
 1. data definitions
 2. user introduction
-3.
+3.calculate how many days old the user will be by due date
+
+
 OUTPUT (list of anything output: introduction, data items, labels, 
 prompts) :
+objective:
+author:
+instructions: make sure to input date of birth, due date, years lived, leap years, and days before birth, and days remaining after due date 
 - user introduction: introduction of objective, author, user 
 instructions/rules
--
+- Date of Birth
+- Assignment Due Date
+- Number of Days
+
+Labels: 
+"DOB", date of birth
+"Due," due date
+"Age", and days (calculated) 
+
 DATA (list of all data items: definition, data type [integer, decimal, 
 text, single character], formatting, or any other specifications):
 
@@ -23,8 +41,9 @@ text, single character], formatting, or any other specifications):
 -numLeapYears [int]: the number of leap years in your life
 -numDaysofBirthYear [int]: the number of days in your birth year before you were born, including your day of birth
 -daysRemaining [int]: the number of days remaining in the current year after the due date for this lab, excluding that date. 
-
-
+-dateOfBirth [string]: 
+-dueDate [string]: 
+-days [int]: number of days between date of birth and due date
 
 3. Algorithm instructions (recipe)
 ***data
@@ -35,9 +54,11 @@ text, single character], formatting, or any other specifications):
 ***
 40
 999 END
+
 4. Test cases (list purpose of each test case, any input values, and 
 expected results)
 Test case #1:
+jan 1 1999 
 Purpose:
 Inputs:
 Expected Results:
@@ -45,6 +66,8 @@ Expected Results:
 10
 999 END
 Test case #2:
+
+due date: june 16 2022
 Purpose:
 Inputs:
 Expected Resu
