@@ -1,0 +1,145 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey, 2027142
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Find the average of all the ages inputted. 
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-age
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+
+-print "Please type your age"
+-read user input of age, as an integer
+-add recorded age to total age
+-increase number of people by 1
+-print total age/number of people
+
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-objective: find the average of all the age typed in
+-author: Aaron Shey
+-prompt: "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+-label "The average of the age inputted are:
+-error: "Invalid: age must be an integer between 10 and 112"
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-age = [integer] someone's age in feet between 10 to 112
+-count = [integer] number of people typed in
+-sum = [integer] sum of everyone's age
+-averageAge = [decimal] average of all the ages typed in
+
+3. Algorithm instructions (recipe)
+5 sum = 0
+6 count = 0
+7 averageAge = 0
+10 output objective
+20 output author
+30 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+40 input age
+45 if age is less than 10 or greater than 112 then output error message and repeat previous command
+46 if age is quit, jump to 999 end
+50 sum = sum + age
+60 count = count + 1
+70 averageAge = sum / count
+80 output label "The average of the ages inputted are:"
+90 output averageAge
+100 jump to instruction 30
+
+
+if input = quit or user doesn't input anything for 5 minutes
+999 END
+1000 output "Thanks for using this program!"
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+Purpose: Verify the algorithm works as expected
+Inputs: One person is 18 and one person is 17 in the class. 
+Expected results: average is 17.5
+
+5 sum = 0
+6 count = 0
+7 averageAge = 0
+10 output objective
+20 output author
+30 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+35 if age is less than 10 or greater than 112 then output error message and repeat previous command
+36 if age is quit, jump to 999 end
+40 input age = 18
+50 sum = 0 + 18 = 5
+60 count = 0 + 1 = 1
+70 averageAge = sum / count
+80 output label "The average of the ages inputted are:"
+90 output averageAge = 18
+100 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+105 if age is less than 10 or greater than 112 then output error message and repeat previous command
+106 if age is quit, jump to 999 end
+110 input age = 5.0
+120 sum = 18 + 17 = 35
+130 count = 1 + 1 = 2
+140 averageAge = sum / count
+150 output label "The average of the ages inputted are:"
+160 output averageAge = 17.5
+170 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+180 input age = quit
+999 END
+1000 output "Thanks for using this program!"
+
+Test case #2: 
+Purpose: Verify the algorithm works as expected
+Inputs: Both people in the class are 20 years old. 
+Expected results: average is 20 
+
+5 sum = 0
+6 count = 0
+7 averageAge = 0
+10 output objective
+20 output author
+30 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+35 if age is less than 10 or greater than 112 then output error message and repeat previous command
+36 if age is quit, jump to 999 end
+40 input age = 20
+50 sum = 0 + 20
+60 count = 0 + 1 = 1
+70 averageAge = sum / count
+80 output label "The average of the ages inputted are:"
+90 output averageAge = 20
+100 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+105 if age is less than 10 or greater than 112 then output error message and repeat previous command
+106 if age is quit, jump to 999 end
+110 input age = 20
+120 sum = 20 + 20 = 40
+130 count = 1 + 1 = 2
+140 averageAge = sum / count
+150 output label "The average of the ages inputted are:"
+160 output averageAge = 20
+170 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+180 input age = quit
+999 END
+1000 output "Thanks for using this program!"
+
+
+
+
+Test case #3:
+Purpose: End the algorithm immediately
+Inputs: The user types in quit immediately
+Expected results: the algorithm quits immediately
+
+5 sum = 0
+6 count = 0
+7 averageAge = 0
+10 output objective
+20 output author
+30 output prompt "What is your age? Type a whole number between 10 and 112, or quit to end the program"
+35 if age is less than 10 or greater than 112 then output error message and repeat previous command
+40 if iage is quit, jump to 999 end
+50 input age = quit
+999 END
+1000 output "Thanks for using this program!"
+
+
+

@@ -1,0 +1,43 @@
+1. Copy each of the following parts into file exercise1.txt and complete.
+
+1a. Explain in words what are the 3 control structures and how each of the 3 control structures
+works in general.
+
+The three control structures are sequence, selection, and looping. 
+
+Sequence control structure is simple: code is executed in order. For example, first a variable could be declared, and then printed into something the programmer could see.  
+
+Selection control structure involves some kind of test, such as selecting all the cities in a dataset with a population larger than 100,000, or all the fruits in a bowl that are colored blue or green.
+
+Looping control structure is often used on large data sets, and involves repeating an instruction over and over again.  For example, if we had a machine that was supposed to continually dispense widgets, we could use a loop to make the machine always dispense widgets.  
+
+1b. Explain in words what are the 3 kinds of programming errors and give examples.
+
+The three kinds of errors are syntax, logic, and execution.  Syntax error occurs when a programmer uses an unrecognized keyword or forgets a symbol, like making a typo or forgetting a punctuation mark. 
+ 
+A logic error occurs when the programmer makes a mistake in trying to achieve the desired outcome.  For example, if I wrote a function that adds two numbers together, but I accidentally wrote multiply instead of add, there would be a logic error. 
+
+An execution error occurs when the programmer commands the computer to do something it can not.  For example, if I attempted to make a 2 terabyte file on a computer with only 500gb of space, the program would fail because there isn't enough space.
+
+1c. What are the 5 functions of all computers?
+
+The five functions of all computers input, processing, output and communication.  For example, a computer might allow you to write an email (input), send it to someone else's email (processing), tell you it was sent (output), and then tell you the size of the email and when it was sent (communication).  
+
+1d. Explain in words what is a statement and what is an expression and what is the difference.
+
+A statement is a declaration of some information, such as assigning 30 to age.  An expression is a combination or comparison of two predefined values.  A statement is different from an expression, because a statement only defines a variable, while an expression manipulates them and returns a different one.  
+
+
+1e. What are the 2 major categories of software and the 3 subcategories of each.
+
+The 2 major categories of software are applications and system software.  Applications can be further divided into productivity, education, and entertainment, and system software can be divided into operating systems, utilities, and language translators. 
+
+1f. What are the 3 language translators and how do they work? They translate what to what?
+
+The three language translators are compilers, interpreters, and assemblers.  A compiler translates human-written code into binary code.  An interpreter also converts human-written code into binary code.  The difference between a compiler and an interpreter is the compiler will "review" the code before converting it into binary code, checking for any errors, while an interpreter will convert portions of the code into binary until it encounters an error.  
+
+An assembler takes in binary code produced by an interpreter or compiler and turns it directly into instructions understandable by a computer.  
+
+
+2. Using the course algorithm template, write a complete algorithm to calculate the average
+height of everyone in the classroom. Name your algorithm file: averageHeight-algorithm.txt

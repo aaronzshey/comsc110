@@ -2,7 +2,7 @@
 // Name: Aaron Shey 2027142
 // Course: COMSC-110-5003
 // Compiler: g++ - GNU C and C++ compiler
-// Editor: mousepad - text editor for Xfce
+// Editor: Geany - lightweight and mature IDE for GNU
 
 // libraries
 #include <iostream>
