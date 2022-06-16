@@ -41,14 +41,16 @@ text, single character], formatting, or any other specifications):
 -numLeapYears [int]: the number of leap years in your life
 -numDaysofBirthYear [int]: the number of days in your birth year before you were born, including your day of birth
 -daysRemaining [int]: the number of days remaining in the current year after the due date for this lab, excluding that date. 
--dateOfBirth [string]: 
--dueDate [string]: 
+-dateOfBirth [string]: Aug 9 2004
+-dueDate [string]: Jun 16 2022
 -days [int]: number of days between date of birth and due date
 
 3. Algorithm instructions (recipe)
 ***data
-10 set ...
-20
+10 set yearsLived=18
+20 set nLeapYears=5
+30 set nDaysBefore=222
+
 ***introduction
 30 output introduction: objective, author, instructions/rules
 ***
