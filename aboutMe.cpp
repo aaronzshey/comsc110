@@ -23,10 +23,10 @@ using namespace std;
 // main program
 int main() {
   // Data
-  int luckyNumber;  //my favorite number
-  float amountEarned;  //how much I want to save
-  string movie;  //my favorite movie
-  char initial;  //my first initial
+  int luckyNumber = 12;  //my favorite number
+  float amountEarned = 420.69;  //how much I want to save
+  string movie = "Yaksha";  //my favorite movie
+  char initial = 'A';  //my first initial
 
   // introduction
   cout << "Objective: This program will serve as a template for all programs\n written in this course.\n";
@@ -36,4 +36,12 @@ int main() {
   cout << "File: " << __FILE__ << endl;
   cout << "Complied: " << __DATE__ << " at " << __TIME__ << endl << endl;
 
+  
+    //outputs
+  
+  cout << "My favorite number is" << luckyNumber << endl;
+ cout << "I want to earn" << amountEarned << endl;
+  cout << "My favorite movie is" << movie << endl;
+  cout << "My initial is" << initial << endl;
+  cout << "My favorite number is" << luckyNumber << endl;
 }  // main
