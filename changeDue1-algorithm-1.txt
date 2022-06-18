@@ -14,6 +14,7 @@ cashPaid cannot be zero or negative.
 1. introduction
 2. defining data items
 3. calculate the total change due and the number of each type of $bills.
+if the change due is negative or 0, exit immediately and output "The amount of change due can not be 0 or negative."
 The paid out bills should include the fewest number of bills. For example, do not include two $10 bills when you can include one $20 bill instead. 
 totalChangeDue = cashPaid - amountOwed
 changeDue = totalChangeDue
@@ -104,6 +105,7 @@ set cashPaid=programmer input
 set amountedOwed = programmer input
 set totalChangeDue = cashPaid - amountOwed
 set changeDue = totalChangeDue
+if changeDue is 0 or less than 0, output "The amount of change due can not be 0 or negative." and then END
 thousand100 = changeDue / 100000
 changeDue = remainder from changeDue / 100000
 thousand10 = changeDue /10000
@@ -157,7 +159,7 @@ output "this many $2 bills: "
 output two
 output "this many $1 bills: "
 output one
-
+END
 
 
 4. Test cases
@@ -166,6 +168,7 @@ set amountedOwed = 45,000
 set cashPaid = 100,000
 set totalChangeDue = 100,000 - 45,000
 set changeDue = totalChangeDue
+changeDue is positive
 thousand100 = 55000 / 100000 = 0
 changeDue = 55000 / 100000 = 55000
 thousand10 = 55000 /10000 = 5
@@ -219,3 +222,19 @@ output "this many $2 bills: "
 output two = 0
 output "this many $1 bills: "
 output one = 0
+END
+
+
+
+Test case 2:
+Purpose: ensure the algorithm exists when an improper input is given.  
+set amountedOwed = 200,000
+set cashPaid = 100,000
+set totalChangeDue = 100,000 - 200,000 = -100,000
+set changeDue = totalChangeDue
+changeDue is negative or zero
+output "The amount of change due can not be 0 or negative." 
+END
+
+
+
