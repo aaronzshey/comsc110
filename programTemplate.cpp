@@ -32,6 +32,6 @@ int main() {
   cout << "Editor(s) used: mousepad\n";
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
-  cout << "Complied: " << __DATE__ << " at " << __TIME__ << endl << endl;
+  cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 
 }  // main

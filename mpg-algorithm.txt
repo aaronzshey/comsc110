@@ -1,0 +1,51 @@
+COMSC-110
+Aaron Shey
+
+1. Objective: Calculate miles per gallon from fuel tank capacity and miles traveled
+
+2. Requirements:
+INPUT
+- [decimal] fuel tank capacity
+- [decimal] total miles traveled
+- [decimal] gallons used
+- [decimal] range
+
+PROCESSING
+1. data definitions
+2. user introduction
+3. calculate gallons left: capacity - used
+mpg = miles traveled / gallons used
+remaining range = mpg * gallons left
+
+4. output results
+
+OUTPUT
+1. user introduction:
+2. data:
+output label "Fuel tank capacity: "
+output fuel tank capacity
+output label "Miles traveled: "
+output miles traveled
+output label "Gallons of fuel used: "
+output gallons used
+output "Miles per gallon: "
+output traveled / gallons used
+output "Remaining range: "
+output (capacity - used) * mpg
+
+
+DATA
+fuel tank capacity: programmer input
+total miles traveled: programmer input
+gallons used: programmer input
+mpg: calculated
+remaining range: calculated
+
+3. Algorithm Instructions:
+
+10 set fuel tank capacity [decimal] to programmer input 
+20 set total miles traveled [decimal] to programmer input 
+30 set gallons used [decimal] to programmer input
+40 calculate mpg by dividing traveled / capacity
+50 
+ output labels and data

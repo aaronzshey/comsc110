@@ -1,5 +1,5 @@
 COMSC-110
-Teacher
+Aaron Shey
 
 1. Objective: calculate how much money to save every month for number of years before retirement and how much money would you have when you retire.
 
@@ -55,6 +55,11 @@ time-->>number of months in years (integer)
 4. Test Cases
 Test Case #1: purpose: example test case
               input values: years=10, interestRate=7.5%, investment=$100
-       expected output: "In 10 years at 7.5% , $100 deposited per month will grow to $17793.03."
+       expected output: "In 10 years at 7.5% interest, $100 deposited per month will grow to $17793.03."
+       
+Test Case #2: 
+purpose: Correctly handle 0s
+input values: years=0, interest=0,investment=0
+expected output: "In 0 years at 0% , $0 deposited per month will grow to $0."
 
 
