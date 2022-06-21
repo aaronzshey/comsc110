@@ -40,4 +40,11 @@ DATA (list of all data items: definition, data type, formatting, or any other sp
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
+10 set lucky number to user input = 12
+20 set favorite movie to user input = Yaksha
+30 set age to user input = 18
+40 set initial to user input = A 
+50 output introduction: objective, author, instructions/rules
+60 output collected data
+999 END
 

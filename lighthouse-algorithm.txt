@@ -1,0 +1,53 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+
+1. Objective (1 sentence brief description of what this will do): 
+determine how far away a boat can see a lighthouse at sea. 
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [decimal] height of lighthouse 
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. calculate visibility distance from height 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-height of lighthouse
+-visible distance of lighthouse 
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- [decimal] height of lighthouse
+- [decimal] distance the lighthouse is visible from
+
+3. Algorithm instructions (recipe)
+
+10 set height of lighthouse to user input
+20 set visible distance of lighthouse to the square root of 0.8 * lighthouse height
+30 output introduction: objective, author, instructions/rules
+
+999 END
+
+
+
+
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+Purpose: ensure the algorithm works as instructed
+Expected output: A 100 ft tall lighthouse can be seen from 9 miles away
+10 set height of lighthouse to user input = 100
+20 set visible distance of lighthouse to the square root of 0.8 * lighthouse height = sqrt(100 * 0.8) = 8.9
+30 output introduction: objective, author, instructions/rules
+40 set decimal precision to 0 decimal points 
+50 output label "The lighthouse can be seen from "
+60 output visible distance of lighthouse
+
+999 END
+
+
