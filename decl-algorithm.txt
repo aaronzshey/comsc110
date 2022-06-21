@@ -1,0 +1,43 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Gather user's personal information
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [int] lucky number
+- [text] favorite movie
+- [decimal] age 
+- [char] initial 
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. output what we were told
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+- [int] lucky number
+- [text] favorite movie
+- [decimal] age 
+- [char] initial 
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- [int] lucky number
+- [text] favorite movie
+- [decimal] age 
+- [char] initial 
+
+3. Algorithm instructions (recipe)
+10 set lucky number to user input
+20 set favorite movie to user input
+30 set age to user input
+40 set initial to user input
+50 output introduction: objective, author, instructions/rules
+60 output collected data
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
