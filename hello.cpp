@@ -8,6 +8,6 @@ int main() {
   string you;
   cout << "Type anything: ";
   cin >> you;
-  //cin.ignore(1000,10);
+  // cin.ignore(1000,10);
   cout << "I love " << you << endl;
 }

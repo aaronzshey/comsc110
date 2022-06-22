@@ -27,7 +27,6 @@ int main() {
   string favoriteMovie;
   double age;
   char initial;
-  
 
   // introduction
   cout << "Objective: Gather user's personal information\n "
@@ -38,7 +37,7 @@ int main() {
   cout << "File: " << __FILE__ << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
   cout << "\n\n\n\n";
-  
+
   cout << "Enter your lucky number: ";
   cin >> luckyNumber;
   cin.ignore(1000, 10);
@@ -52,11 +51,10 @@ int main() {
   cin >> initial;
   cin.ignore(1000, 10);
   cout << "\n\n\n\n";
-  
+
   cout << "Your favorite number is " << luckyNumber << endl;
   cout << "Your favorite movie is " << favoriteMovie << endl;
   cout << "Your initial is " << initial << endl;
   cout << "Your age is " << age << endl;
- 
 
 }  // main

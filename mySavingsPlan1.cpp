@@ -25,14 +25,14 @@ using namespace std;
 // main program
 int main() {
   // Data
-  double interestRate = 0.075; // = annual interest rate (decimal)
-  interestRate = interestRate/12.0;
-  double deposit = 100.0; // = monthly deposit (decimal)
-  int years = 10; // = number of years (integer)
-  int time = years * 12; // = number of months (integer)
-  double sum = deposit * ((pow((1 + interestRate),time)-1) / interestRate);
+  double interestRate = 0.075;  // = annual interest rate (decimal)
+  interestRate = interestRate / 12.0;
+  double deposit = 100.0;  // = monthly deposit (decimal)
+  int years = 10;          // = number of years (integer)
+  int time = years * 12;   // = number of months (integer)
+  double sum = deposit * ((pow((1 + interestRate), time) - 1) / interestRate);
   interestRate = (interestRate * 100) * 12;
-    
+
   // introduction
   cout << "Objective: calculate accumulated money from interest\n "
           "written in this course.\n";
@@ -43,9 +43,10 @@ int main() {
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
   cout.setf(ios::fixed | ios::showpoint);
   cout << setprecision(2);
-  cout << "In " << years << " years, $" << deposit << " deposited per month will grow to $" << sum << " earning " << interestRate << "% interest";
+  cout << "In " << years << " years, $" << deposit
+       << " deposited per month will grow to $" << sum << " earning "
+       << interestRate << "% interest";
 
-	
 }  // main
 
-//expected: 17793.03
+// expected: 17793.03

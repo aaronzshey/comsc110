@@ -1,1 +1,65 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Make a simple guessing game where the user receives input about the quality of their guess.
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [int] user input
+
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. game loop
+4. output
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+- user introduction: introduction of objective, author, user instructions/rules
+- [feedback] That's too high
+- [feedback] That's too low
+- [feedback] Type a number between 1-100
+- [feedback] You guessed it!
+- [end] Thanks for playing! 
+
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- random number
+- user input
+
+3. Algorithm instructions (recipe)
+10 output introduction: objective, author, instructions/rules
+20 set myNumber to a random number between 1 and 100
+30 set guess to user input
+40 compare guess and myNumber
+50 if guess = myNumber output end of game messages and jump to 999 end
+60 if guess > myNumber output "That's too high"
+70 if guess < myNumber output "That's too low"
+80 jump to instruction 20
+
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+Purpose: ensure the algorithm works as expected
+10 output introduction: objective, author, instructions/rules
+20 set myNumber to a random number between 1 and 100 = 30
+30 set guess to user input = 50
+40 compare guess and myNumber
+50 if guess = myNumber output end of game messages and jump to 999 end
+60 if guess > myNumber output "That's too high" <- true
+70 if guess < myNumber output "That's too low" 
+80 jump to instruction 20
+90 set guess to user input = 40
+100 if guess = myNumber output end of game messages and jump to 999 end
+110 if guess > myNumber output "That's too high" <- true
+120 if guess < myNumber output "That's too low" 
+130 set guess to user input = 30
+140 if guess = myNumber output end of game messages and jump to 999 end <- true
+150 output "Thanks for playing!"
+
 

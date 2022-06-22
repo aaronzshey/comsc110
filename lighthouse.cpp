@@ -28,7 +28,6 @@ using namespace std;
 int main() {
   // Data
   // NONE
-
   // introduction
   cout << "Objective: This program will serve as a template for all programs\n "
           "written in this course.\n";
@@ -37,19 +36,19 @@ int main() {
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
-  
-  //formatting
+
+  // formatting
   cout.setf(ios::fixed);
   cout << setprecision(0);
-  
-  //data:
+
+  // data:
   int lighthouseHeightinFeet;
   cout << "Type in the height of your lighthouse in feet and press enter. ";
   cin >> lighthouseHeightinFeet;
   cin.ignore(256, '\n');
   double distInMiles = sqrt(double(0.8 * lighthouseHeightinFeet));
-  
-  //output
+
+  // output
   cout << "a " << lighthouseHeightinFeet
        << " foot tall lighthouse can be seen from " << distInMiles
        << " miles away.";
