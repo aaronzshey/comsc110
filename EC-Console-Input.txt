@@ -1,0 +1,60 @@
+Aaron Shey 2027142
+COMSC-110-1021
+A. What is a prompt and why should it be used for console input?
+
+A prompt tells the user what kind and type of information they are supposed to input, such as numbers or text.  A prompt should be used for console output, so the user is aware of what they should type into the program. 
+
+
+B. What is a transfer statement?  Transfer from what to what?
+
+A transfer statement moves information from one place to another.  In the context of console input, a transfer statement moves data from the keyboard input to a variable. 
+
+
+C. Explain what is a keyboard buffer and how it works with respect to console input in a program?
+
+A keyboard buffer stores the input from the console until the 'enter' key is pressed or the keyboard input is otherwise 
+
+
+D. Explain what is the difference between console input and programmer input.
+
+Console input comes from the user, and can change each time the program is run without editing the program.  In contrast, programmer input comes from the programmer, and does not change between executions of the program unless the program is edited. 
+
+
+E. Explain in English what this statement cin.ignore(1000,10); exactly will do.
+
+cin.ignore(1000,10) ignores any inputs longer than 1,000 characters, along with removing everything after the appearance of a carriage return.  10 is the ascii code for the paragraph break - this line tells the program to ignore a paragraph break, and any information after it. 
+
+
+F. What library is necessary for the statement cin.ignore(1000,10); need to work?  What are the 2 parameters, and what do they represent?  Can the parameters be changed?
+
+The iostream library is necessary for cin.ignore.  The two parameters are the max length of the input allowed (in this case, 1000 characters), and which characters should be ignored (in this case, 10 which is the ASCII code for the paragraph break or end of line character). 
+
+
+
+G. Which data types need to use this statement cin.ignore(integer, integer);  and explain why in words?
+
+Every data type needs cin.ignore(integer, integer) - without it, the keyboard buffer would continue to grow and never be transferred to the intended variable.
+
+
+
+H. What happens to the input values if an integer is input from the keyboard after outputting a prompt, and then text is input from the keyboard after outputting a prompt, and there is no use of a cin.ignore(integer, integer); statement?
+
+Without the cin.ignore line, the recorded input would be the integer input, and then some amount of blank space, and then the text.  
+
+
+
+I. Explain in English what this statement getline(cin, name); exactly will do.
+
+getline(cin,name) reads the contents of one line - it stops recording data once enter is pressed.  It then transfers the collected line to the variable with the identifier "name".
+
+
+
+J. Explain what happens to the input value if text with multiple words separated by spaces is input from the keyboard using cin and not getline?
+
+With cin, the input is broken at the space and only the first few characters up to the first space are recorded.  With getline, the entire input with spaces is captured, because the capturing doesn't stop until a line break/enter.  
+
+
+
+K. Explain why should prompts and the user response be on the same line?
+
+Prompts and user response should be in the same line because the user's vision will move linearly from the description of what kind of information they should be inputting, to the actual area of input. 

@@ -5,8 +5,8 @@ Aaron Shey
 
 2. Requirements:
 --INPUT: 
-amountOwed = set amount by author
-cashPaid = set amount by author
+amountOwed = user input
+cashPaid = user input
 amountOwed is always less than cashPaid.
 cashPaid cannot be zero or negative.
 
@@ -45,7 +45,7 @@ one = changeDue
 --OUTPUT:
 objective
 author 
-user instructions: "set the amount owed and the cash paid amounts to calculate change due in all specified U.S. bills."
+user instructions: "input the amount owed and the cash paid amounts to calculate change due in all specified U.S. bills."
 label1: "amount owed: " 
 amountOwed
 label2: "amount cash paid: "
@@ -101,8 +101,8 @@ one-->>number of $1 bills (integer)
 output "calculate change due in a transaction using various denominations"
 output "author: Aaron Shey"
 output "the following inputs are needed: changeDue and amountOwed"
-set cashPaid=programmer input
-set amountedOwed = programmer input
+set cashPaid=user input
+set amountedOwed = user input
 set totalChangeDue = cashPaid - amountOwed
 set changeDue = totalChangeDue
 if changeDue is 0 or less than 0, output "The amount of change due can not be 0 or negative." and then END

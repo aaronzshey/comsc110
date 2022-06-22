@@ -21,8 +21,15 @@ using namespace std;
 // main program
 int main() {
   // data
-  int amountOwed = 45000;                      // amount owed
-  int cashPaid = 100000;                       // amount paid
+  int amountOwed; //= 45000;                      // amount owed
+  int cashPaid; //= 100000;                       // amount paid
+  cout << "Enter how much you owe: ";
+  cin >> amountOwed;
+  cin.ignore(1000,10);
+  cout << "Enter how much you paid: ";
+  cin >> cashPaid;
+  cin.ignore(1000,10);
+  
   int totalChangeDue = cashPaid - amountOwed;  // total change due
   int changeDue = totalChangeDue;
   int thousand100;  // number of $100000 bills

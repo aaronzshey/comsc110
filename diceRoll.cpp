@@ -5,10 +5,12 @@
 // Editor: MS NotePad
 
 // libraries
-#include <cstdlib>
-#include <ctime>
+
 #include <iostream>
 using namespace std;
+
+#include <cstdlib>
+#include <ctime>
 
 // Programmer defined data types
 // NONE
