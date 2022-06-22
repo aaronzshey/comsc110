@@ -1,0 +1,27 @@
+1. What are all the logical operators and which ones are opposites of each other?
+
+The logical operators are (from left to right) greater (>), greater or equal (>=),  
+
+2. What are the 4 lines in the truth table and what does each expression evaluate to?
+When does the truth table come to play in a selection control structure?
+
+3. Explain the difference between Opposite logic and Not logic?
+
+4. What are advantages of the complete if statement versus the limitations of the switch statement in C++?
+
+5. What happens in a if statement where there is no curly braces?
+for example:
+if (...)
+statement;
+statement;
+
+if (...) statement;
+
+6. What happens in a if statement where there is no statement?
+for example:
+if (...);
+
+7. Name the 2 kinds of loops (how the loop is controlled).
+
+
+8. Define a sentinel value.
