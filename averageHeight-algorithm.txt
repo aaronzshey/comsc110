@@ -1,0 +1,106 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey, 2027142
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Find the average of all the heights inputted. 
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-height: console input
+-number of people: programmer input
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+
+-print "Please type your height"
+-read user input of height, as a floating point integer
+-add recorded height to total height
+-increase number of people by 1
+-print total height/number of people
+
+continue until number of heights inputted = number of people
+
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-objective: find the average of all the heights typed in
+-author: Aaron Shey
+-prompt: "What is your height, in feet?"
+-label "The average of the heights inputted are:"
+-averageHeight
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-height = someone's height in feet, as a floating point integer
+-sizeOfClass = how many people expected
+-sum = sum of everyone's height
+-averageHeight = average of all the heights typed in
+
+3. Algorithm instructions (recipe)
+5 sum = 0
+6 count = programmer input
+7 averageHeight = 0
+8 index = 0
+10 output objective
+20 output author
+30 output prompt "What is your height, in feet? Type a decimal number between 3.0 and 7.0"
+40 input height
+45 if height is less than 3 or greater than 7, repeat previous output 
+46 if height is quit, jump to 999 end
+50 sum = sum + height
+60 index = index + 1
+70 averageHeight = sum / count
+80 output label "The average of the heights inputted are:"
+90 output averageHeight
+100 index = index + 1
+if index = count jump to 999 end
+
+if input = quit or user doesn't input anything for 5 minutes
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+Everyone in the class is 5 ft tall, and there are 3 people in the class:
+
+5 sum = 0
+6 count = 3
+7 averageHeight = 0
+8 index = 0
+10 output objective
+20 output author
+30 output prompt "What is your height, in feet? Type a decimal number between 3.0 and 7.0"
+40 input height = 5.0
+45 if height is less than 3 or greater than 7, repeat previous output 
+46 if height is quit, jump to 999 end
+50 sum = 0 + 5 = 5
+60 index = 0 + 1 = 1
+65 index does not equal count
+70 averageHeight = sum / count
+80 output label "The average of the heights inputted are:"
+90 output averageHeight = 5
+100 output prompt "What is your height, in feet? Type a decimal number between 3.0 and 7.0"
+110 input height = 5.0
+115 if height is less than 3 or greater than 7, repeat previous output 
+116 if height is quit, jump to 999 end
+120 sum = 5 + 5 = 10
+130 index = 1 + 1 = 2
+135 index is not equal to count
+140 averageHeight = sum / count
+150 output label "The average of the heights inputted are:"
+160 output averageHeight = 5
+170 output prompt "What is your height, in feet? Type a decimal number between 3.0 and 7.0"
+175 if height is less than 3 or greater than 7, repeat previous output 
+176 if height is quit, jump to 999 end
+180 input height = 5.0
+190 sum = 10 + 5 = 15
+200 index = 1 + 2 = 3
+205 count = index
+210 averageHeight = sum / count
+220 output label "The average of the heights inputted are:
+230 output averageHeight = 5
+240 output prompt "What is your height, in feet? Type a decimal number between 3.0 and 7.0"
+250 input height = quit
+255 if height is less than 3 or greater than 7, repeat previous output 
+256 if height is quit, jump to 999 end
+999 END
+
+

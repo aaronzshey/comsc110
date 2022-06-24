@@ -1,13 +1,34 @@
 1. What are all the logical operators and which ones are opposites of each other?
 
-The logical operators are (from left to right) greater (>), greater or equal (>=),  
+The logical operators are (from left to right) greater (>), greater or equal (>=), less than (<), less or equal (<=), equals (==), not equal (!=), AND (&&), and OR (||).
+
+&&, || are opposites.
+++, != are opposites.
+\>, <= are opposites.
+<, >= are opposites. 
+
 
 2. What are the 4 lines in the truth table and what does each expression evaluate to?
+3. 
+The four lines of the truth table are:
+TRUE and TRUE: TRUE
+TRUE and FALSE: FALSE
+TRUE OR FALSE: FALSE
+TRUE or FALSE: TRUE
+
+
 When does the truth table come to play in a selection control structure?
+
+The truth table comes into play when AND or OR are used in the if expressions.  
 
 3. Explain the difference between Opposite logic and Not logic?
 
+Opposite logic reverses the operator used, while NOT logic reverses the result of the operation.  For example, opposite logic turns equals into not equals, while NOT logic turns the result of a==a into FALSE instead of TRUE.  
+
 4. What are advantages of the complete if statement versus the limitations of the switch statement in C++?
+
+The switch statement only applies to equality with integers and chars - no strings.  The complete if statement can handle other logical expressions, such as greater or less than, along with being handle to strings.  
+
 
 5. What happens in a if statement where there is no curly braces?
 for example:
@@ -15,13 +36,21 @@ if (...)
 statement;
 statement;
 
-if (...) statement;
+The second statement is executed every time the program is run, regardless of the status of the first if condition, because the result of the if statement only has an effect up to the first semicolon.  
+
 
 6. What happens in a if statement where there is no statement?
 for example:
 if (...);
 
+Nothing happens, because the if statement's power is stopped immediately after the semicolon.  The if statement only serves to slow down the program, and nothing else.  
+
 7. Name the 2 kinds of loops (how the loop is controlled).
 
+The two kinds of loops are for event controlled and count controlled.  
 
 8. Define a sentinel value.
+
+A sentinel value controls the continued operation of a program.  For example, ending a program when a value is equal to 999 or X or something unique like that involves using a sentinel value - 999 or X being the sentinel value.  
+
+

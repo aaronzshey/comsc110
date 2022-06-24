@@ -49,10 +49,10 @@ int main() {
     } else if (guess > myNumber) {
       cout << "That's too high" << endl;
       continue;
-    }
-    else if (guess < myNumber) {
+    } else if (guess < myNumber) {
       cout << "That's too low" << endl;
-      continue;;
+      continue;
+      ;
     }
   }
 
