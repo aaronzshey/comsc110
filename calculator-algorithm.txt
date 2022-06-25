@@ -1,0 +1,59 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Make a simple four function calculator.
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [decimal] first number
+- [decimal] second number
+- [char] operation
+- [char] sentinel value
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. get the inputs
+4. if the sentinel is n, exit the loop otherwise continue 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-ask for first number
+-ask for second number
+-ask for operation
+-ask for sentinel
+-output result of calculation
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- [decimal] first number
+- [decimal] second number
+- [char] operation
+- [char] sentinel value
+
+3. Algorithm instructions (recipe)
+***data
+10 set first number to user input
+20 set second number to user input
+30 set operation to user input
+40 set sentinel to user input
+50 perform calculation with inputs and output result
+60 if sentinal is y, go to instruction 10
+70 if sentinal is n, go to 999 END
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: Ensure the algorithm works as expected
+10 set first number to user input = 1
+20 set second number to user input = 2
+30 set operation to user input = +
+40 set sentinel to user input = N
+50 perform calculation with inputs and output result = 3
+60 if sentinal is y, go to instruction 10
+70 if sentinal is n, go to 999 END
+
+999 END
+

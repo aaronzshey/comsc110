@@ -1,1 +1,74 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Play the card game war against the user.
+
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-none
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+	generate a random number from 2-14 to represent a card for the computer
+Output the computer's card's value, outputting 2-10 as that value, but output 11 as Jack, 12 as Queen, 13 as King, and 14 as Ace
+generate a random number from 0-3 to represent a card's suit for the computer
+Output the computer's card's suit, but output 0 as Spades, 1 as Diamonds, 2 as Hearts, and 3 as Clubs
+For the human player:
+generate a random number from 2-14 to represent a card for the user
+Output the user's card's value, outputting 2-10 as that value, but output 11 as Jack, 12 as Queen, 13 as King, and 14 as Ace
+generate a random number from 0-3 to represent a card's suit for the user
+Output the user's card's suit, but output 0 as Spades, 1 as Diamonds, 2 as Hearts, and 3 as Clubs
+Determine the winner:
+If the computer's card's value is LESS than the human's card's value, output "Human wins!"
+If the computer's card's value is EQUAL TO the human's card's value, output "It's a tie."
+If the computer's card's value is GREATER than the human's card's value, output "Computer wins!"
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-computer's value and suite
+-human's value and suite
+-status: win, loss, etc
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-
+
+3. Algorithm instructions (recipe)
+10 generate random numbers for human and computer card suite and values
+20 output corresponding suites and values
+30 sum the values and suites and compare them
+40 output result depending on who has a higher value
+50 if there is a tie, tell the user to rerun the program
+
+999 END
+
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+10 generate random numbers for human and computer card suite and values - 4 of hearts, 3 of spades (computer, human)
+20 output corresponding suites and values - 4 of hearts, 3 of spades (computer, human)	
+30 sum the values and suites and compare them - computer has 6, human has 4 - human wins 
+40 output result depending on who has a higher value - You win! 
+50 if there is a tie, tell the user to rerun the program
+
+999 END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,0 +1,54 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Create a simple guessing game with numbers between 1 to 10.
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [int] guess
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. generate random number
+4. compare user guess and random number
+5. continue comparison until they are equal
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+- user introduction: introduction of objective, author, user instructions/rules
+- [feedback] I'm thinking of a number from 1 to 10.
+- [feedback] You guessed it!
+- [error] Try again...
+- [feedback] Thanks for playing!
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- user input [int]
+
+3. Algorithm instructions (recipe)
+10 set myNumber to randomly generated number
+20 get user's guess from console
+30 output introduction: objective, author, instructions/rules
+40 compare user's guess and my number
+50 if the guess doesn't match the number, go to instruction 20
+60 if the guess matches the number, output "You guessed it!"
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: test the algorithm's logic
+10 set myNumber to randomly generated number = 3
+20 get user's guess from console = 1
+30 output introduction: objective, author, instructions/rules
+40 compare user's guess and my number
+50 if the guess doesn't match the number, go to instruction 20 and output "Try again"
+60 get user's guess from console = 2
+70 compare user's guess and my number
+80 if the guess doesn't match the number, go to instruction 20 and output "Try again"
+90 get user's guess from console = 3
+100 compare user's guess and my number
+110 if the guess matches the number, output "You guessed it!" and "Thanks for playing!"
+
+999 END
