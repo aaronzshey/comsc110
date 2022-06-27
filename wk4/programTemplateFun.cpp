@@ -22,9 +22,20 @@ void introduction(string objective, string instructions);
 
 // main program
 
-void introduction(string objective, string instructions) {
-  // introduction
-  cout << "Objective: " << obj << "\n"; 
+int main() {
+  // Data
+  cout << "Objective: " << "\n"; 
+  cout << "Programmer: Aaron\n";
+  cout << "Editor(s) used: geany\n";
+  cout << "Compiler(s) used: g++\n";
+  cout << "File: " << __FILE__ << endl;
+  cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
+}  // main
+
+
+void introduction(string objective, string instructions){
+
+  cout << "Objective: " << objective << "\n"; 
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
   cout << "Compiler(s) used: g++\n";
@@ -32,8 +43,5 @@ void introduction(string objective, string instructions) {
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 }
 
-int main() {
-  // Data
-string objective = "dummy text here
-introduction(objective);
-}  // main
+
+
