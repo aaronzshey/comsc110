@@ -18,20 +18,23 @@ using namespace std;
 // NONE
 
 // Programmer defined functions
-// NONE
+void introduction(string objective, string instructions);
 
 // main program
-int main() {
-  // Data
-  // NONE
 
+void introduction(string objective, string instructions) {
   // introduction
-  cout << "Objective: This program will serve as a template for all programs\n "
-          "written in this course.\n";
+  cout << "Objective: " << obj << "\n"; 
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
+}
+
+int main() {
+  // Data
+string objective = "dummy text here
+introduction(objective);
 
 }  // main
