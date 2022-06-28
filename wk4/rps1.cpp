@@ -36,8 +36,13 @@ int main() {
   int c;
   
   while (true) {
+         p = playerMove();
+        if (p == 3) {
+    cout << "Thanks for playing!";
+    break;
+  } 
   
-   p = playerMove();
+
    c = computerMove();
   if (c == 0) {
     cout << "Computer move: r\n";
@@ -47,10 +52,7 @@ int main() {
     cout << "Computer move: s\n";
   }
 
-  if (p == 3) {
-    cout << "Thanks for playing!";
-    break;
-  } else {
+
     int status = p - c;
     if (status == 0) {
       cout << "It's a tie!\n";
@@ -61,7 +63,7 @@ int main() {
       cout << "You lose!\n";
       winCounter -= 1;
     }
-  }
+  
   
   cout << "You have won " << winCounter << " times\n";
 }//while
