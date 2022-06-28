@@ -1,0 +1,47 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+Simulate a game of rock paper scissors:
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-player's move
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. generate computer's move
+4. receive player's move
+5. compare moves and announce winner or tie 
+5a. assign the values: rock 0, paper 1, scissor 2
+5b. player's move's value - computer's move's value = win status
+5c. if winstatus is greater than 0, player wins, if its 0 tie, less than 0 computer wins.
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-Type your move: R for rock, P for paper, or S for scissors 
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-
+
+3. Algorithm instructions (recipe)
+***data
+10 set ...
+20
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+10
+
+999 END
+
+Test case #2: 

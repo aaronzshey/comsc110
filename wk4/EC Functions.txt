@@ -1,0 +1,28 @@
+1. Copy the following questions and write your answer below each question, separated by one blank line between questions and answers.
+
+a. what are all the kinds of functions in C++?
+The four sources of functions in C++ are programmer defined, library, builtins, and the main function.  The two kinds of functions are void and value returning functions. 
+
+b. What are the 2 types of functions in C++, and how does each type of function work?
+
+The two types of functions are void and value returning functions.  Void functions return nothing, and usually output something to the console, while value returning functions 
+
+c. When are functions used?
+Functions are used to make code more concise and easy to read, such as when some code needs to be repeated.  
+
+d. Where do functions go in a program, and in what order should we list functions?
+
+Functions should be listed in the order they are used at the top of the program file, between the main function and the libraries declared at the top.  
+
+e. What are parameters, what are they used for, how many can you have, and how are they documented?
+Parameters are values a function takes in, defined in the parentheses following the function name.  They are used to simplify complicated processes that happen in a program.  You can use as many parameters are you like - there is no limit, except maybe the size of the computer's memory.  
+
+f. Can a function call another function?
+Yes
+
+g. What is a function prototype?
+A function prototype is a promise to the compiler that the function will be defined later on in the code.  Function prototypes are used to 
+
+h. What is the first code block in a function and what are the first few statements and why?
+
+The first few statements of a program are the library imports and then the programmer-defined functions.  This improves readability for any future readers of the code. 
