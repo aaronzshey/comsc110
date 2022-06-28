@@ -29,8 +29,8 @@ int main() {
   string objective = "play rock paper scissors";
   string instructions = "type r for rock, p for paper, and s for scissors";
   introduction(objective, instructions);
-  let p = playerMove();
-  let c = computerMove();
+  int p = playerMove();
+  int c = computerMove();
   if (c == 0) {
   cout << "Computer move: r\n";
   } else if (c == 1) {
