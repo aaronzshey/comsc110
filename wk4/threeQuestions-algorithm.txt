@@ -1,0 +1,44 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): make a simple quiz program
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- [char] user answers 
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read user input and compare to correct answer
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-whether the user got the answer right or wrong
+-number of questions answered correctly
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-question [string] true or false, the integer data type can hold an infinite amount of numbers [t/f]
+-question [string] boolean can have a) one b) two c) three different values
+-question [string] hexadecimal is base a)16 b)17 c) 18
+
+3. Algorithm instructions (recipe)
+***data
+10 set ...
+20
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+10
+
+999 END
+
+Test case #2: 
