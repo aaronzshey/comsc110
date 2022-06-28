@@ -29,6 +29,16 @@ int main() {
   string objective = "play rock paper scissors";
   string instructions = "type r for rock, p for paper, and s for scissors";
   introduction(objective, instructions);
+  let p = playerMove();
+  let c = computerMove();
+  if (c == 0) {
+  cout << "Computer move: r\n";
+  } else if (c == 1) {
+  cout << "Computer move: p\n";
+  } else if (c == 2) {
+  cout << "Computer move: s\n";
+  }
+ 
 if (playerMove() == 999) {
 cout << "You did something wrong, try again";
 } else {
@@ -39,7 +49,7 @@ cout << "It's a tie!\n";
 } else if (status > 0) {
 cout << "You win!\n";
 } else if (status < 0) {
-
+cout << "You lose!\n";
 }
 
 }
@@ -51,6 +61,7 @@ int playerMove() {
   char playerGuessRaw;
   cin << playerGuessRaw;
   char playerGuess = tolower(playerGuessRaw);
+  cout << "Your move: " << playerGuessRaw << "\n";
   if (playerGuess == 'r') {
     return 0;
   } else if (playerGuess == 'p') {
