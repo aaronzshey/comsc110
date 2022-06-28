@@ -35,7 +35,7 @@ int main() {
   int p;
   int c;
   
-  while (p != 999) {
+  while (true) {
   
    p = playerMove();
    c = computerMove();
@@ -47,8 +47,9 @@ int main() {
     cout << "Computer move: s\n";
   }
 
-  if (p == 999) {
-    cout << "You did something wrong, try again";
+  if (p == 3) {
+    cout << "Thanks for playing!";
+    break;
   } else {
     int status = p - c;
     if (status == 0) {
@@ -80,7 +81,7 @@ int playerMove() {
   } else if (playerGuess == 's') {
     return 2;
   } else {
-    return 999;
+    return 3;
   }
 }
 
