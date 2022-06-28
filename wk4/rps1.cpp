@@ -29,12 +29,16 @@ int computerMove();
 int main() {
   // user introduction
   string objective = "play rock paper scissors";
-  string instructions = "type r for rock, p for paper, and s for scissors";
+  string instructions = "type r for rock, p for paper, and s for scissors and q for quit";
   introduction(objective, instructions);
+  int winCounter = 0;
+  int p;
+  int c;
   
+  while (p != 999) {
   
-  int p = playerMove();
-  int c = computerMove();
+   p = playerMove();
+   c = computerMove();
   if (c == 0) {
     cout << "Computer move: r\n";
   } else if (c == 1) {
@@ -51,10 +55,15 @@ int main() {
       cout << "It's a tie!\n";
     } else if (status > 0) {
       cout << "You win!\n";
+      winCounter += 1;
     } else if (status < 0) {
       cout << "You lose!\n";
+      winCounter -= 1;
     }
   }
+  
+  cout << "You have won " << winCounter << " times\n";
+}//while
 
 } // main
 
