@@ -7,6 +7,8 @@
 // libraries
 #include <iostream>
 using namespace std;
+#include <cstdlib>
+#include <ctime>
 
 // Programmer defined data types
 // NONE
@@ -18,7 +20,7 @@ using namespace std;
 // NONE
 
 // Programmer defined functions
-int introduction(string objective, string instructions);
+void introduction(string objective, string instructions);
 int playerMove();
 int computerMove();
 
@@ -29,44 +31,43 @@ int main() {
   string objective = "play rock paper scissors";
   string instructions = "type r for rock, p for paper, and s for scissors";
   introduction(objective, instructions);
+  
+  
   int p = playerMove();
   int c = computerMove();
   if (c == 0) {
-  cout << "Computer move: r\n";
+    cout << "Computer move: r\n";
   } else if (c == 1) {
-  cout << "Computer move: p\n";
+    cout << "Computer move: p\n";
   } else if (c == 2) {
-  cout << "Computer move: s\n";
+    cout << "Computer move: s\n";
   }
- 
-if (playerMove() == 999) {
-cout << "You did something wrong, try again";
-} else {
 
-int status = playerMove() - computerMove();
-if (status == 0) {
-cout << "It's a tie!\n";
-} else if (status > 0) {
-cout << "You win!\n";
-} else if (status < 0) {
-cout << "You lose!\n";
-}
+  if (p == 999) {
+    cout << "You did something wrong, try again";
+  } else {
+    int status = p - c;
+    if (status == 0) {
+      cout << "It's a tie!\n";
+    } else if (status > 0) {
+      cout << "You win!\n";
+    } else if (status < 0) {
+      cout << "You lose!\n";
+    }
+  }
 
-}
-
-}  // main
+} // main
 
 int playerMove() {
-  cout << "type r for rock, p for paper, and s for scissors";
+  cout << "type r for rock, p for paper, and s for scissors: ";
   char playerGuessRaw;
   cin >> playerGuessRaw;
   char playerGuess = tolower(playerGuessRaw);
-  cout << "Your move: " << playerGuessRaw << "\n";
+  cout << "Your move: " << playerGuess << "\n";
   if (playerGuess == 'r') {
     return 0;
   } else if (playerGuess == 'p') {
     return 1;
-
   } else if (playerGuess == 's') {
     return 2;
   } else {
@@ -76,10 +77,11 @@ int playerMove() {
 
 int computerMove() {
   srand(time(0));
-  return (rand() % 2);
+  int temp = rand() % 2;
+  return temp;
 }
 
-int introduction(string objective, string instructions) {
+void introduction(string objective, string instructions) {
   cout << "Objective: " << objective << "\n";
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
@@ -87,4 +89,4 @@ int introduction(string objective, string instructions) {
   cout << "File: " << __FILE__ << endl;
   cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
-}  // introduction
+} // introduction
