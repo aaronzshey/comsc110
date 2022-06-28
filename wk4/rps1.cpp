@@ -59,7 +59,7 @@ cout << "You lose!\n";
 int playerMove() {
   cout << "type r for rock, p for paper, and s for scissors";
   char playerGuessRaw;
-  cin << playerGuessRaw;
+  cin >> playerGuessRaw;
   char playerGuess = tolower(playerGuessRaw);
   cout << "Your move: " << playerGuessRaw << "\n";
   if (playerGuess == 'r') {
