@@ -29,29 +29,28 @@ int computerMove();
 int main() {
   // user introduction
   string objective = "play rock paper scissors";
-  string instructions = "type r for rock, p for paper, and s for scissors and q for quit";
+  string instructions =
+      "type r for rock, p for paper, and s for scissors and q for quit";
   introduction(objective, instructions);
   int winCounter = 0;
   int p;
   int c;
-  
+
   while (true) {
-         p = playerMove();
-        if (p == 3) {
-    cout << "Thanks for playing!";
-    break;
-  } 
-  
+    p = playerMove();
+    if (p == 3) {
+      cout << "Thanks for playing!";
+      break;
+    }
 
-   c = computerMove();
-  if (c == 0) {
-    cout << "Computer move: r\n";
-  } else if (c == 1) {
-    cout << "Computer move: p\n";
-  } else if (c == 2) {
-    cout << "Computer move: s\n";
-  }
-
+    c = computerMove();
+    if (c == 0) {
+      cout << "Computer move: r\n";
+    } else if (c == 1) {
+      cout << "Computer move: p\n";
+    } else if (c == 2) {
+      cout << "Computer move: s\n";
+    }
 
     int status = p - c;
     if (status == 0) {
@@ -63,12 +62,11 @@ int main() {
       cout << "You lose!\n";
       winCounter -= 1;
     }
-  
-  
-  cout << "You have won " << winCounter << " times\n";
-}//while
 
-} // main
+    cout << "You have won " << winCounter << " times\n";
+  }  // while
+
+}  // main
 
 int playerMove() {
   cout << "type r for rock, p for paper, and s for scissors: ";
@@ -101,4 +99,4 @@ void introduction(string objective, string instructions) {
   cout << "File: " << __FILE__ << endl;
   cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
-} // introduction
+}  // introduction

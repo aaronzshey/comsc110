@@ -39,15 +39,39 @@ DATA (list of all data items: definition, data type, formatting, or any other sp
 50 convert player move into 0, 1 or 2
 60 player move - computer move = win status
 70 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins.
-80 repeat until 
+80 repeat until player types q
 
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
-Test case #1: 
-10
+Test case #1:  show a win, loss, tie, and quit
+***data
+10 set wins to 0
+20 set user guess
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 generate computer move - 0, 1 or 2 [1]
+50 convert player move into 0, 1 or 2: input s, 2
+60 player move - computer move = win status = 1
+70 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins. player wins! wins = 1
+80 repeat until player types q
+90 generate computer move - 0, 1 or 2 [0]
+100 convert player move into 0, 1 or 2 input s, [2]
+110 player move - computer move = win status = 2
+120 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins. player wins! win = 2;
+130 repeat until player types q
+140 generate computer move - 0, 1 or 2 [2]
+150 convert player move into 0, 1 or 2 input r, [0]
+160 player move - computer move = win status = 2
+170 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins. computer wins! win = 2;
+180 repeat until player types q
+90 generate computer move - 0, 1 or 2 [2]
+100 convert player move into 0, 1 or 2 input s, [2]
+110 player move - computer move = win status = 2
+120 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins. player wins! tie, wins = 2;
+130 repeat until player types q
+140 user inputs q
+999 ENDs
 
-999 END
-
-Test case #2: 

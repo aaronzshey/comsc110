@@ -2,7 +2,7 @@
 // Name: Aaron Shey 2027142
 // Course: COMSC-110-5003
 // Compiler: g++ - GNU C and C++ compiler
-// Editor: vim 
+// Editor: vim
 
 // libraries
 #include <iostream>
@@ -36,6 +36,6 @@ void introduction(string objective, string instructions) {
   cout << "Editor(s) used: geany\n";
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
-cout << "Instructions: " << instructions << endl;
+  cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 }  // introduction

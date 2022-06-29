@@ -24,11 +24,11 @@ void introduction(string objective, string instructions);
 
 int main() {
   // Data
-  cout << "Objective: " << "\n"; 
+  cout << "Objective: "
+       << "\n";
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 }  // main
-

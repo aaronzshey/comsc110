@@ -24,7 +24,7 @@ void introduction(string objective, string instructions);
 
 void introduction(string objective, string instructions) {
   // introduction
-  cout << "Objective: " << obj << "\n"; 
+  cout << "Objective: " << obj << "\n";
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
   cout << "Compiler(s) used: g++\n";
@@ -34,6 +34,6 @@ void introduction(string objective, string instructions) {
 
 int main() {
   // Data
-string objective = "dummy text here
-introduction(objective);
+  string objective = "dummy text here
+      introduction(objective);
 }  // main
