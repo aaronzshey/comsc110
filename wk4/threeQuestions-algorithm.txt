@@ -25,20 +25,46 @@ DATA (list of all data items: definition, data type, formatting, or any other sp
 
 3. Algorithm instructions (recipe)
 ***data
-10 set ...
-20
+10 set score to 0
+20 define quiz question function
+21 output question
+22 input guess
 ***introduction 
 30 output introduction: objective, author, instructions/rules
 ***
-40
+40 output quiz question
+50 collect user guess
+60 compare answer and guess
+70 if guess = answer, increase score by 1 and output "Correct!"
+80 otherwise, output "Incorrect!"
+90 repeat until all the questions are exhausted
+100 output score
 
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
 Test case #1: 
-10
-
-999 END
-
-Test case #2: 
+***data
+***data
+10 set score to 0
+20 define quiz question function
+21 output question
+22 input guess
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 output quiz question: true or false, the integer data type can hold an infinite amount of numbers [t/f]
+50 collect user guess - t
+60 compare answer and guess 
+70 if guess = answer, increase score by 1 and output "Correct!"
+80 otherwise, output "Incorrect!" <-- Incorrect! 
+90 output quiz question: boolean can have a) one b) two c) three different values
+100: collect user guess - b 
+110: Correct! 
+120: score ++
+130 output: hexadecimal is base a)16 b)17 c) 18 
+140: input: b 
+150: correct!
+160: score++
+170: output Thanks for playing, you scored 2/3

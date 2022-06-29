@@ -24,16 +24,22 @@ OUTPUT (list of anything output: introduction, data items, labels, prompts) :
 -Type your move: R for rock, P for paper, or S for scissors 
 
 DATA (list of all data items: definition, data type, formatting, or any other specifications):
--
+-player move
+-computer move
+-score (number of wins)
 
 3. Algorithm instructions (recipe)
 ***data
-10 set ...
-20
+10 set wins to 0
+20 set user guess
 ***introduction 
 30 output introduction: objective, author, instructions/rules
 ***
-40
+40 generate computer move - 0, 1 or 2
+50 convert player move into 0, 1 or 2
+60 player move - computer move = win status
+70 if winstatus is greater than 0, player wins and increment score, if its 0 tie, less than 0 computer wins.
+80 repeat until 
 
 999 END
 

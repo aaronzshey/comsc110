@@ -3,39 +3,60 @@ Full Name and Student ID Number: Aaron Shey 2021742
 Course and section: COMSC-110-5003
 
 1. Objective (1 sentence brief description of what this will do): 
+calculate how long it will take to earn a certain amount of money
 
 2. Requirements (any and all requirements organized by input, processing, output, data):
 INPUT (any data items to be input): 
--
+-none
 
 PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
 1. data definitions
 2. user introduction
-3. 
+3. begin incrementing amount of wealth
+4. find how long it takes for wealth to grow to target value, if you double how much you save each week
+
 
 OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
 -user introduction: introduction of objective, author, user instructions/rules
--
+-how long in weeks it takes to reach 
 
 DATA (list of all data items: definition, data type, formatting, or any other specifications):
--
+-target value
+-number of weeks
 
 3. Algorithm instructions (recipe)
 ***data
-10 set ...
-20
-***introduction 
+10 set wealth to 0
+20 set accumulating function:
+21 loop: every time the loop runs, i *= 5 and time += 1
+22 wealth += 2 * i
 30 output introduction: objective, author, instructions/rules
-***
-40
+40 continue running loop until target value is reached
+50 output "It will take you " time " weeks to become a " type specified previously
 
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
 Test case #1: 
-10
+10 set wealth to 0
+20 set time to 0
+30 start accumulating function:
+40 type = thousandaire
+50 target = 1000
+60 loop: every time the loop runs, i *= 5 and time += 1
+70 wealth += 2 * i
+80 output: 8 weeks to be a thousandaire
+90 type = millionaire
+100 target = 1000000
+110 loop: every time the loop runs, i *= 5 and time += 1
+120 wealth += 2 * i
+130 output: 18 weeks to be a millionaire
+140 type = billionaire
+150 target = 1000000000
+160 loop: every time the loop runs, i *= 5 and time += 1
+170 wealth += 2 * i
+180 output: 28 weeks to be a billionaire.
 
 999 END
 
-Test case #2: 
