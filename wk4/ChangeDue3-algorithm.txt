@@ -1,0 +1,237 @@
+COMSC-110
+Aaron Shey
+
+1. Objective:  calculate change due in a transaction using these U.S. bills - no cents: $1, $2, $5, $10, $20, $50, $100, $500, $1000, $5000, $10000, and $100000 bills.
+
+2. Requirements:
+--INPUT: 
+amountOwed = file input
+cashPaid = file input
+amountOwed is always less than cashPaid.
+cashPaid cannot be zero or negative.
+
+--PROCESSING: 
+1. introduction
+2. defining data items
+3. calculate the total change due and the number of each type of $bills.
+if the change due is negative or 0, exit immediately and output "The amount of change due can not be 0 or negative."
+The paid out bills should include the fewest number of bills. For example, do not include two $10 bills when you can include one $20 bill instead. 
+totalChangeDue = cashPaid - amountOwed
+changeDue = totalChangeDue
+thousand100 = changeDue / 100000
+changeDue = remainder from changeDue / 100000
+thousand10 = changeDue /10000
+changeDue = remainder from changeDue / 10000
+thousand5 = changeDue / 5000
+changeDue = remainder from changeDue / 5000
+thousand = changeDue / 1000
+changeDue = remainder from changeDue / 1000
+hundred5 = changeDue / 500
+changeDue = remainder from changeDue / 500
+hundred = changeDue /100
+changeDue = remainder from changeDue / 100
+fifty = changeDue / 50
+changeDue = remainder from changeDue / 50
+twenty = changeDue / 20
+changeDue = remainder from changeDue / 20
+ten = changeDue / 10
+changeDue = remainder from changeDue / 10
+five = changeDue / 5
+changeDue = remainder from changeDue / 5
+one = changeDue
+4. Output results: 
+function validate : if the value is zero, don't output it.  If the value is non-zero, output it
+
+
+--OUTPUT:
+objective
+author 
+user instructions: "make sure the file change.txt includes the amount owed and cash paid"
+label1: "amount owed: " 
+amountOwed
+label2: "amount cash paid: "
+cashPaid
+label3: "Change due: "
+totalChangeDue
+label4: "Change paid out in: "
+label5: "this many $100,000 bills: "
+thousand100
+label6: "this many $10,000 bills: "
+thousand10
+label7: "this many $5,000 bills: "
+thousand5
+label8: "this many $1,000 bills: "
+thousand
+label9: "this many $500 bills: "
+hundred5
+label10: "this many $100 bills: "
+hundred
+label11: "this many $50 bills: "
+fifty
+label12: "this many $20 bills: "
+twenty
+label13: "this many $10 bills: "
+ten
+label14: "this many $5 bills: "
+five
+label15: "this many $2 bills: "
+two
+label16: "this many $1 bills: "
+one
+
+--DATA:
+amountOwed-->>amount owed (integer)
+cashPaid-->>amount tendered to pay for the amount owed (integer)
+totalChangeDue-->>the difference between amountOwed and cashPaid (integer)
+changeDue-->>change due for each value of bills (integer)
+thousand100-->>number of $100000 bills (integer)
+thousand10-->>number of $10000 bills (integer)
+thousand5-->>number of $5000 bills (integer)
+thousand-->>number of $1000 bills (integer)
+hundred5-->>number of $500 bills (integer)
+hundred-->>number of $100 bills (integer)
+fifty-->>number of $50 bills (integer)
+twenty-->>number of $20 bills (integer)
+ten-->>number of $10 bills (integer)
+five-->>number of $5 bills (integer)
+two-->>number of $2 bills (integer)
+one-->>number of $1 bills (integer)
+
+
+3. Algorithm Instructions
+output "calculate change due in a transaction using various denominations"
+output "author: Aaron Shey"
+output "the following inputs are needed: changeDue and amountOwed"
+set cashPaid=user input
+set amountedOwed = user input
+set totalChangeDue = cashPaid - amountOwed
+set changeDue = totalChangeDue
+if changeDue is 0 or less than 0, output "The amount of change due can not be 0 or negative." and then END
+thousand100 = changeDue / 100000
+changeDue = remainder from changeDue / 100000
+thousand10 = changeDue /10000
+changeDue = remainder from changeDue / 10000
+thousand5 = changeDue / 5000
+changeDue = remainder from changeDue / 5000
+thousand = changeDue / 1000
+changeDue = remainder from changeDue / 1000
+hundred5 = changeDue / 500
+changeDue = remainder from changeDue / 500
+hundred = changeDue /100
+changeDue = remainder from changeDue / 100
+fifty = changeDue / 50
+changeDue = remainder from changeDue / 50
+twenty = changeDue / 20
+changeDue = remainder from changeDue / 20
+ten = changeDue / 10
+changeDue = remainder from changeDue / 10
+five = changeDue / 5
+changeDue = remainder from changeDue / 5
+one = changeDue
+
+output "amount owed: " 
+output amountOwed
+output "amount cash paid: "
+output cashPaid
+output "Change due: "
+output totalChangeDue
+output "Change paid out in: "
+output "this many $100,000 bills: "
+output thousand100
+output "this many $10,000 bills: "
+output thousand10
+output "this many $5,000 bills: "
+output thousand5
+output "this many $1,000 bills: "
+output thousand
+output "this many $500 bills: "
+output hundred5
+output "this many $100 bills: "
+output hundred
+output "this many $50 bills: "
+output fifty
+output "this many $20 bills: "
+output twenty
+output "this many $10 bills: "
+output ten
+output "this many $5 bills: "
+outputfive
+output "this many $2 bills: "
+output two
+output "this many $1 bills: "
+output one
+
+
+
+1000: function validate
+1010: parameters: value and denomination
+1020: if value != 0
+1030: output This many denomination bills needed: value;
+1040: else, continue as normal
+END
+
+
+4. Test cases
+Test Case #1:
+set amountedOwed = 45,000
+set cashPaid = 100,000
+set totalChangeDue = 100,000 - 45,000
+set changeDue = totalChangeDue
+changeDue is positive
+thousand100 = 55000 / 100000 = 0
+changeDue = 55000 / 100000 = 55000
+thousand10 = 55000 /10000 = 5
+changeDue = 55000 % 10000 = 5000
+thousand5 = 5000 / 5000 = 1
+changeDue = 5000 / 5000 = 0
+thousand = 0 / 1000
+changeDue = 0 % 1000 = 0
+hundred5 = 0 / 500 = 0
+changeDue = 0 % 500 = 0
+hundred = 0 /1000 = 0
+changeDue = 0 % 100
+fifty = 0 / 50
+changeDue = 0 % 50
+twenty = 0 / 20
+changeDue = 0 % 20
+ten = 0 / 10
+changeDue = 0 % 10
+five = 0 / 5
+changeDue = 0 % 5
+one = 0
+
+output "amount owed: " 
+output amountOwed = 45000
+output "amount cash paid: "
+output cashPaid = 100000
+output "Change due: "
+output totalChangeDue
+
+
+output "This many $10,000 bills: "
+output thousand10 = 5
+output "this many $5,000 bills: "
+output thousand5 = 1
+
+
+1000: function validate
+1010: parameters: value and denomination
+1020: if value != 0
+1030: output This many denomination bills needed: value;
+1040: else, continue as normal
+
+END
+
+
+Test case 2:
+Purpose: ensure the algorithm exists when an improper input is given.  
+set amountedOwed = 200,000 <- read from file
+set cashPaid = 100,000 <- read from file 
+set totalChangeDue = 100,000 - 200,000 = -100,000
+set changeDue = totalChangeDue
+changeDue is negative or zero
+output "The amount of change due can not be 0 or negative." 
+END
+
+
+

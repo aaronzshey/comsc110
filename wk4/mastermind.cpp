@@ -8,12 +8,11 @@ int main() {
   char color2 = randColor(rand() % 3);
   char color3 = randColor(rand() % 3);
   char color4 = randColor(rand() % 3);
-int numberOfGuesses = 0;
+  int numberOfGuesses = 0;
 
-for (numberOfGuesses = 0; numberOfGuesses < 10; numberOfGuesses++) {
-
-char userGuess
-}
+  for (numberOfGuesses = 0; numberOfGuesses < 10; numberOfGuesses++) {
+    char userGuess
+  }
 }
 
 int randColor(int randNumber) {

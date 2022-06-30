@@ -1,0 +1,71 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+read temperatures in celsius from a file and 
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-file containing temperatures
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. convert celsius into fahrenheit and output
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-celsius and fahrenheit temperature
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-file input: celsius
+-output [calculated]: fahrenheit
+
+3. Algorithm instructions (recipe)
+***data
+10 set temperatures to file input
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 if temperatures = -999 or end of file detected, quit immediately.  otherwise, continue:
+40 convert celsius to fahrenheit
+50 output both temperatures
+
+1000: celsius to fahrenheit 
+1010: fahrenheit = (9/5) * C + 32
+1020: return fahrenheit
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: 
+purpose: test the correct operation of the algorithm
+***data
+10 set temperatures to file input
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 if temperatures = -999 or end of file detected, quit immediately.  otherwise, continue:
+40 convert celsius to fahrenheit: -40C = -40F
+50 output both temperatures: -40C is -40 F
+
+1000: celsius to fahrenheit 
+1010: fahrenheit = (9/5) * C + 32
+1020: return fahrenheit
+999 END
+
+
+Test case #2: 
+***data
+10 set temperatures to file input: -999
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 if temperatures = -999 or end of file detected, quit immediately.  otherwise, continue:
+40 nothing is outputted
+
+1000: celsius to fahrenheit 
+1010: fahrenheit = (9/5) * C + 32
+1020: return fahrenheit
+999 END
