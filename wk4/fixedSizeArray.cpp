@@ -31,10 +31,11 @@ int main() {
   int input = 0;
   for (i = 0; i < count; i++) {
     cout << "Type a number [0-100]: ";
-    cin >> input cin.ignore(1000, 10);
+    cin >> input;
+     cin.ignore(1000, 10);
     if (input > 100 || input < 0) {
       cout << "Make sure your number is between 0 and 100 \n";
-i--;
+      i--;
     } else {
       numbers[i] = input;
     }
@@ -46,7 +47,7 @@ i--;
     sum += numbers[j];
   }
 
-  int average = double(sum) / double(count);
+  double average = double(sum) / double(count);
 
   int k = 0;
   int numGreater = 0;
@@ -60,8 +61,8 @@ i--;
   cout << numGreater << " numbers are greater than the average.\n";
 
   // user introduction
-  string objective = "Objective goes here";
-  string instructions = "User instructions go here";
+  string objective = "average and evaluate some scores";
+  string instructions = "input numbers between 0 and 100";
   introduction(objective, instructions);
 
 }  // main

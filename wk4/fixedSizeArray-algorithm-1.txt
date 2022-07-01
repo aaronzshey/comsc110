@@ -1,0 +1,158 @@
+Aaron Shey 2027142
+COMSC-110-8215
+Lab 11
+
+1. Objective: Prompt the user to input 4 numbers between 0 and 100, and calculate the average of those 4 numbers, and how many of those 4 numbers are above the average.
+
+2. Requirements:
+--INPUT
+4 numbers between 0-100
+
+--PROCESSING
+1. data definitions
+2. user introduction
+3. input values
+4. calculate and output average
+5. calculate and output number of values that are greater than the average
+
+--OUTPUT
+objective
+author
+user Instructions: You will be prompted for 4 numbers to get the average and how many of those numbers are above the average.
+prompt1: "Please enter a number [0-100]: "
+label1: "The average of "
+label2: " numbers is "
+label3: ".  "
+label4: " numbers are greater than the average."
+
+--Data
+array-Numbers defined for 4 values-->>stores 4 input values from the user (integer)
+average-->>calculated average of 4 values input (decimal)
+nGreater-->>calculated number of input values that are greater than the calculated average (integer)
+sum-->>sum of input values (integer)
+count-->>count input values (integer)
+i-->>loop iteration index (integer)
+
+3. Algorithm instructions
+***user information
+10 output objective
+20 output author
+30 output user instructions
+***initialize values
+40 i = 0
+50 count = 0
+60 sum = 0
+70 average = 0
+80 nGreater = 0
+***input loop
+90 output prompt1
+100 input Numbers[count]
+105 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+110 sum = sum + Numbers[count]
+120 count = count + 1
+130 if count <= 3 then skip to instruction 90
+***calculate average
+140 if count > 0 then average = sum / count
+***calculate the number of input values that are greater than the average
+150 if average < Numbers[i] then nGreater = nGreater + 1
+160 i = i + 1
+170 if i < count then skip to instruction 150
+***output results
+180 output "The average of " and count and " numbers is " and average and ".  "
+190 output nGreater and " numbers are greater than the average."
+999 END
+
+4. Test Cases
+Test Case #1: input values = 64, 94, 94, 94.  Expected results = 86.5 and 3 values are greater than the average.
+
+10 ***user information
+20 output objective
+30 output author
+40 output user instructions
+50 ***initialize values
+60 i = 0
+70 count = 0
+80 sum = 0
+90 average = 0
+100 nGreater = 0
+110 ***input loop
+120 output prompt1
+130 input Numbers[count] = 64
+140 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+150 sum = sum + Numbers[count] = 64
+160 count = count + 1
+170 if count <= 3 then skip to instruction 90 - skip to instruction 90
+180 input Numbers[count] = 94
+190 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+200 sum = sum + Numbers[count] = 64 + 94 = 158
+210 count = count + 1
+220 if count <= 3 then skip to instruction 90 - skip to instruction 90
+230 input Numbers[count] = 94
+240 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+250 sum = sum + Numbers[count] = 158 + 94 = 252
+260 count = count + 1
+270 if count <= 3 then skip to instruction 90 - skip to instruction 90
+280 input Numbers[count] = 94
+290 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+300 sum = sum + Numbers[count] = 252 + 94 = 346
+310 count = count + 1
+320 if count <= 3 then skip to instruction 90 
+330 ***calculate average
+340 if count > 0 then average = sum / count
+350 ***calculate the number of input values that are greater than the average
+360 if average < Numbers[i] then nGreater = nGreater + 1
+370 i = i + 1
+380 if i < count then skip to instruction 150
+390 ***output results
+400 output "The average of " and count and " numbers is " and average and ".  "
+410 output nGreater and " numbers are greater than the average."
+420 END
+
+
+
+
+
+
+
+***user information
+10 output objective
+20 output author
+30 output user instructions
+***initialize values
+40 i = 0
+50 count = 0
+60 sum = 0
+70 average = 0
+80 nGreater = 0
+***input loop
+90 output prompt1
+100 input Numbers[count] = 64
+110 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+120 sum = sum + Numbers[count] = 64
+130 count = count + 1
+140 if count <= 3 then skip to instruction 90 - skip to instruction 90
+150 input Numbers[count] = 94
+160 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+170 sum = sum + Numbers[count] = 64 + 94 = 158
+180 count = count + 1
+190 if count <= 3 then skip to instruction 90 - skip to instruction 90
+200 input Numbers[count] = 94
+210 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+220 sum = sum + Numbers[count] = 158 + 94 = 252
+230 count = count + 1
+240 if count <= 3 then skip to instruction 90 - skip to instruction 90
+250 input Numbers[count] = 94
+260 if Numbers[count] < 0 OR Numbers[count] > 100 then skip to instruction 90
+270 sum = sum + Numbers[count] = 252 + 94 = 346
+280 count = count + 1
+290 if count <= 3 then skip to instruction 90 
+***calculate average
+300 if count > 0 then average = sum / count
+***calculate the number of input values that are greater than the average
+310 if average < Numbers[i] then nGreater = nGreater + 1
+320 i = i + 1
+330 if i < count then skip to instruction 150
+***output results
+340 output "The average of " and count and " numbers is " and average and ".  "
+350 output nGreater and " numbers are greater than the average."
+360 END
