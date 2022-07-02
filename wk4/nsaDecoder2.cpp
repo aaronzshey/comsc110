@@ -29,31 +29,49 @@ int main() {
   string instructions = "type in the name of the file you want to decode.";
   introduction(objective, instructions);
 
-  string line;
   string userInput;
   cout << "Type the file you want to decode: ";
   cin >> userInput;
   cin.ignore(1000, 10);
 
-ifsftream offset;
-offset.open("offset.txt");
+  int size = 0;
+  int* offsets = new int[size];
+  ifstream offsetFile;
+  offsetFile.open("offset.txt");
 
-while (fileIn.good()) {
+  int temp;
+  while (offsetFile.good()) {
+    offsetFile >> temp;
 
+    if (!offsetFile.good()) {
+      break;
+    } else {
+      // offsetFile >> offsets[size];
+      offsets[size] = temp;
+      size++;
+    }
+  }
 
-
-}
-
+  string line;
   ifstream fileIn;
   fileIn.open(userInput);
-cout << "Decoded text: ";
+  cout << "Decoded text: ";
   while (fileIn.good()) {
     getline(fileIn, line);
-    // cout << line;
     for (int i = 0; i < line.length(); i++) {
-      line[i]--;
+      line[i] -= offsets[i % size];
       cout << line[i];
     }
   }
 
 }  // main
+
+void introduction(string objective, string instructions) {
+  cout << "Objective: " << objective << "\n";
+  cout << "Programmer: Aaron\n";
+  cout << "Editor(s) used: geany\n";
+  cout << "Compiler(s) used: g++\n";
+  cout << "File: " << __FILE__ << endl;
+  cout << "Instructions: " << instructions << endl;
+  cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
+}  // introduction
