@@ -1,0 +1,53 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do):  make a simple encoder
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- read a file containing the information to encode
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read input
+4. encode input by incrementing each char by 1
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-encoded information into file
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-input
+
+3. Algorithm instructions (recipe)
+***data
+10 set data to file contents
+20 set i = 0
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1:
+50 increment each char's unicode value by 1
+60 save encoded value to file
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the algorithm works properly
+3. Algorithm instructions (recipe)
+***data
+10 set data to file contents = "I really like computer programming!"
+20 set i = 0
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1:
+50 increment each char's unicode value by 1 - J!sfbmmz!mjlf!dpnqvufs!qsphsbnnjoh"
+60 save encoded value to file -> secrets.txt
+
+999 END
+
+

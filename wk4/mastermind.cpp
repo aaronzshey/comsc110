@@ -3,15 +3,22 @@
 #include <iostream>
 
 int main() {
+
+int numOfR;
+int numOfG;
+int numOfY;
+int numOfB;
+
   srand(time(0));
   char color1 = randColor(rand() % 3);
   char color2 = randColor(rand() % 3);
   char color3 = randColor(rand() % 3);
   char color4 = randColor(rand() % 3);
+
   int numberOfGuesses = 0;
 
   for (numberOfGuesses = 0; numberOfGuesses < 10; numberOfGuesses++) {
-    char userGuess
+    char userGuess;
   }
 }
 
