@@ -1,0 +1,59 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do):  make a more complex encoder
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- read a file containing the information to encode
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read input
+4. [array] generate size for array of offsets, between 5 to 10
+5. generate random numbers for offets, between -20 to 20
+6. write encoded text to a file, and offsets to another file
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-encoded information into file
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-input
+-random numbers used to offset the input
+-offseted string
+
+3. Algorithm instructions (recipe)
+***data
+10 set data to file contents
+20 set i = 0;
+30 set offset array SIZE to rand between 5 and 10
+40 generate SIZE numbers between -20 and 20 for the offsets
+***introduction 
+50 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1:
+50 increment each char's unicode value by i % SIZE value in offset array
+60 save encoded value to file
+70 save offsets to secret.txt
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the algorithm works properly
+***data
+10 set data to file contents
+20 set i = 0;
+30 set offset array SIZE to rand between 5 and 10: 6
+40 generate SIZE numbers between -20 and 20 for the offsets: 16 -20 3 -13 -1 -14 
+***introduction 
+50 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1: (file contents: I really like computer programming!)
+50 increment each char's unicode value by i % SIZE value in offset array
+60 save encoded value to file: total gibberish
+70 save offsets to secret.txt
+

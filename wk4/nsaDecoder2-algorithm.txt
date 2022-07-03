@@ -1,0 +1,58 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do):  make a more complex encoder
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- read a file containing the information to encode
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read input
+4. [array] array of offsets, read from file
+5. generate random numbers for offets, between -20 to 20
+6. decrement each character's unicode value by the corresponding offset
+7. output decoded values to the console
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-decoded string to console
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-input
+-random numbers used to offset the input
+-encrypted string
+
+3. Algorithm instructions (recipe)
+***data
+10 set data to file contents
+20 set i = 0;
+30 read contents of file offset.txt and save to offset array
+***introduction 
+40 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1:
+50 decrement each char's unicode value by i % SIZE value in offset array
+70 output decoded value
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the algorithm works properly
+***data
+10 set data to file contents: the gibbiersh from encoder2-algorithm
+20 set i = 0;
+30 read contents of file offset.txt and save to offset array: 16 -20 3 -13 -1 -14 
+***introduction 
+40 output introduction: objective, author, instructions/rules
+***
+40 for i = 0; i < length of file contents, increment i by 1:
+50 decrement each char's unicode value by i % SIZE value in offset array
+70 output decoded value: "I really like computer programming!"
+
+
+
