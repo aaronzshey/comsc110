@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 int randColor(int randNumber) {
@@ -29,6 +30,9 @@ int main() {
   char color3 = randColor(rand() % 4);
   char color4 = randColor(rand() % 4);
   
+
+ofstream scoresFile;
+scoresFile.open("mastermind-scores.txt");
 
   
   if (color1 == 'R' || color2 == 'R' || color3 == 'R' || color4 == 'R') {
@@ -82,9 +86,13 @@ int main() {
       cout << 'B';
       correct++;
     }
+//correct
     if (correct == 4) {
       cout << "\nYou guessed the code in " << numberOfGuesses + 1 << " tries!";
+scoresFile >> numberOfGuesses + 1 << "\n";
+
       break;
+
     }
 
     // red

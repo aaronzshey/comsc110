@@ -1,5 +1,5 @@
 COMSC-110
-Teacher
+Aaron Shey 2027142
 Mastermind
 
 1. Objective (1 sentence brief description of what this will do):  Mastermind Game: 4 colors, 4 correct positions, 10 attempts.
@@ -67,25 +67,35 @@ nColors = number of correct colors in the incorrect position [1-4] (white pegs)
 ## if userGuess2 = code2 then add 1 to number of correct positions
 ## if userGuess3 = code3 then add 1 to number of correct positions
 ## if userGuess4 = code4 then add 1 to number of correct positions
-...
+if number of corrects = 4, break with number of guesses
 
-4. Test cases (list purpose of each test case, any input values, and expected results)  ***INCOMPLETE***
-Purpose: [simplest and expected test]: 
-Input values:
-Expected results:  
+if any of the guesses are red, increment number of reds
+if any of the guesses are green, increment number of greens
+if any of the guesses are yellow, increment number of yellows
+if any of the guesses are blue, increment number of blues
 
+
+
+4. Test cases (list purpose of each test case, any input values, and expected results) 
 
 Test case #1:
 Purpose: [simplest and expected test]: user guesses correctly on first try
-Input values:
-Expected results:  
-...
-That's correct!  You guessed it in 1 attempt!
+Input values: RGBY
+Expected results: That's correct!  You guessed it in 1 attempt!
 
+Generated guess: RGBY
+Reds: 1
+Greens: 1
+Blues: 1
+Yellows: 1
+
+Input: RGBY
+
+All the inputs match immediately, so the guess is immediately validated. 
 
 Test case #2:
 Purpose: incorrect guess
-Input values:
+Input values: 
 Expected results:  
 ...
 Number of correct colors in correct position:
@@ -94,12 +104,4 @@ You have ___ tries remaining.
 ...
 
 
-Test case #3:
-Purpose: invalid input
-Input values: xxxx
-Expected results:
-...
-Your input is incorrect. It must be four letters that represent one of the colors.
- For example: 'Blue Red Red Green' would be 'BRRG'
-...
 
