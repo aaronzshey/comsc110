@@ -2,40 +2,88 @@
 Full Name and Student ID Number: Aaron Shey 2021742
 Course and section: COMSC-110-5003
 
-1. Objective (1 sentence brief description of what this will do): 
+1. Objective (1 sentence brief description of what this will do): make a simple password-protected mortgage calculator
 
 2. Requirements (any and all requirements organized by input, processing, output, data):
 INPUT (any data items to be input): 
--
+-password
+-file containing mortgage info
 
 PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
 1. data definitions
 2. user introduction
-3. 
+3. receive correct password
+4. read mortgage interest and amount from file and calculate monthly payment
 
 OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
 -user introduction: introduction of objective, author, user instructions/rules
--
+-password request
+-the amount borrowed, annual interest rate, payback period, and monthly payment
 
 DATA (list of all data items: definition, data type, formatting, or any other specifications):
--
+-struct MortgageValues
+-amountBorrowed (p, principal) [double]
+-interest rate (r, rate) [double]
+-payback period (t, months) [double]
+-monthly payment (calculated) [double]
 
 3. Algorithm instructions (recipe)
-***data
-10 set ...
-20
-***introduction 
-30 output introduction: objective, author, instructions/rules
-***
-40
+**data
+10: output introduction, objectives, and misc. info
+20: declare struct MortgageValues with fields amountBorrowed, interestRate and numOfPayments
+30: getPassword
+40: request name of file containing mortgage info
+50: if the file isn't there or formatted wrong, throw error
+60: read the first line into MortgageValues.amountBorrowed
+70: read second line into MortgageValues.interestRate
+80: set payment period to 30 years, or 360 months
+90: calculate payment period using equation (r * p * (1+r)^n) / ((1+r)^n - 1)
+100: output using appropriate labels
+
+
+1000 function getPassword
+1010 get user input
+1020 if user input doesn't match stored password, return to instruction 1010
+1030 if user input matches stored password, exit function and continue operation
+
 
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
-Test case #1: 
-10
+Test case #1: File is bad
+**data
+10: output introduction, objectives, and misc. info
+20: declare struct MortgageValues with fields amountBorrowed, interestRate and numOfPayments
+30: getPassword -> 2027142
+40: request name of file containing mortgage info
+50: if the file isn't there or formatted wrong, throw error 
+60 exit immediately 
 
-999 END
+1000 function getPassword
+1010 get user input
+1020 if user input doesn't match stored password, return to instruction 1010
+1030 if user input matches stored password, exit function and continue operation
 
-Test case #2: 
+Test case #2: algorithm functions normally
+**data
+10: output introduction, objectives, and misc. info
+20: declare struct MortgageValues with fields amountBorrowed, interestRate and numOfPayments
+30: getPassword -> 2027142
+40: request name of file containing mortgage info: mortgage.txt
+50: if the file isn't there or formatted wrong, throw error
+60: read the first line into MortgageValues.amountBorrowed: 270,000
+70: read second line into MortgageValues.interestRate: 0.05125
+80: set payment period to 30 years, or 360 months
+90: calculate payment period using equation (r * p * (1+r)^n) / ((1+r)^n - 1) -> 1470.11
+100: output using appropriate labels:
+Amount borrowed: $270000
+Annual interest rate: 5.125% 
+Payback period: 360 months 
+Monthly payment: $1470.11
+
+
+1000 function getPassword
+1010 get user input
+1020 if user input doesn't match stored password, return to instruction 1010
+1030 if user input matches stored password, exit function and continue operation

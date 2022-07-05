@@ -6,16 +6,17 @@
 
 // libraries
 #include <fstream>
+
 #include <iostream>
-using namespace std;
-#include <cmath>
+
+using namespace std;#include <cmath>
 
 // Programmer defined data types
-struct MortgageValues {
-  double amountBorrowed;  // p
-  double interestRate;    // r
-  double numOfPayments;   // n
-  double p;
+struct MortgageValues
+{
+  double amountBorrowed; // p
+  double interestRate; // r
+  double numOfPayments; // n
 };
 
 // Special compiler dependent definitions
@@ -29,14 +30,15 @@ void introduction(string objective, string instructions);
 void getPassword();
 // main program
 
-int main() {
-getPassword();
+int main()
+{
+  getPassword();
   // user introduction
   string objective =
-      "make a simple mortgage calculator with file and console input";
+    "make a simple mortgage calculator with file and console input";
   string instructions =
-      "type the name of the file with your amount borrowed first and interest "
-      "rate second, separated by paragraph breaks";
+    "type the name of the file with your amount borrowed first and interest "
+  "rate second, separated by paragraph breaks";
   introduction(objective, instructions);
 
   MortgageValues m;
@@ -48,7 +50,8 @@ getPassword();
 
   fin.open(fileName);
 
-  if (!fin.good()) {
+  if (!fin.good())
+  {
     throw "i/o err";
   } //if 
   m.numOfPayments = 30 * 12;
@@ -58,17 +61,18 @@ getPassword();
   fin.ignore(1000, 10);
 
   double payment = (m.amountBorrowed * (m.interestRate / 12.0) *
-                    pow((1 + (m.interestRate / 12.0)), m.numOfPayments)) /
-                   (pow((1 + (m.interestRate / 12.0)), m.numOfPayments) - 1);
+      pow((1 + (m.interestRate / 12.0)), m.numOfPayments)) /
+    (pow((1 + (m.interestRate / 12.0)), m.numOfPayments) - 1);
 
   cout << "\nAmount borrowed: $" << m.amountBorrowed << "\n";
-  cout << "Annual interest rate: " << m.interestRate << "% \n";
-  cout << "Payback period: " << m.numOfPayments << "months \n";
+  cout << "Annual interest rate: " << m.interestRate * 100 << "% \n";
+  cout << "Payback period: " << m.numOfPayments << " months \n";
   cout << "Monthly payment: $" << payment << "\n";
 
-}  // main
+} // main
 
-void introduction(string objective, string instructions) {
+void introduction(string objective, string instructions)
+{
   cout << "Objective: " << objective << "\n";
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
@@ -76,18 +80,18 @@ void introduction(string objective, string instructions) {
   cout << "File: " << __FILE__ << endl;
   cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
-}  // introduction
+} // introduction
 
 
-void getPassword() 
-{ 
-  while (true) 
-  { 
-    string password; 
-    cout << "Enter the password: "; 
-    getline(cin, password); 
-  
-    if (password == "2027142") break; 
-    cout << "INVALID. "; 
+void getPassword()
+{
+  while (true)
+  {
+    string password;
+    cout << "Enter the password: ";
+    getline(cin, password);
+
+    if (password == "2027142") break;
+    cout << "INVALID. ";
   } // while 
 } // getPassword 
