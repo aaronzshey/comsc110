@@ -1,0 +1,112 @@
+COMSC-110
+Aaron Shey 2027142
+Mastermind
+
+1. Objective (1 sentence brief description of what this will do):  Mastermind Game: 4 colors, 4 correct positions, 10 attempts.
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT:
+-uG1
+-uG2
+-uG3
+-uG4 
+-target code to guess
+-file containing old scores
+
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. open file containing scores, make array of file contents, sort, and then read and output the lowest score
+4. set target code to guess
+5. game loop: output guess prompt, input user guess and validate, output user guess feedback, for 10 guesses or less
+6. game conclusion: output user score and thank user for playing
+
+OUTPUT:
+-program introduction: objective, author, course, editor, compiler
+-previous scores: lowest score in the scores file, output this as the score to beat.  
+-game rules:
+The computer picks a sequence of colors using a combination of R=Red, G=Green, B=Blue, Y=Yellow. 
+The code sequence length of colors is 4.
+The objective of the game is to guess the exact positions of the colors in the computer's sequence.
+After you enter your guess sequence of colors, the computer responds with the number of correct colors in the correct position (B=black), and the number of correct colors in the wrong position (W=white).
+You win the game if you guess all the colors in the code sequence and when they all in the right position in 10 guesses.
+You lose the game if you use all attempts without guessing the computer code sequence.
+
+-user instructions:
+Enter any combination of the letters R, G, B, Y representing the 4 colors Red, Green, Blue, or Yellow.  You will receive feedback in the form of number of black pegs (B= a correct color in the correct position) and white pegs (W= a correct color in the incorrect position).  
+If the number of black or white pegs is less than 4 that means a user selected color(s) is not included in the code to break.
+
+-prompt user play "Guess #", nGuess, " [example: RRGB] or Q to quit: "
+-guess feedback: a "B" for each color in user guess that is the correct color in the correct position, and a "W" for each color in the user guess that is the correct color in the incorrect position.
+-invalid input feedback: Your input is incorrect. It must be four letters that represent one of the colors. For example: 'Blue Red Red Green' would be 'BRRG'
+-game won feedback: That's correct!
+-exceeded maximum number of guesses feedback: You ran out of guesses!
+-game over feedback: Thanks for playing!
+
+
+
+DATA:
+-uG1 = user guess position 1 (character) valid values: [RGBY]
+-uG2 = user guess position 2 (character) valid values: [RGBY]
+-uG3 = user guess position 3 (character) valid values: [RGBY]
+-uG4 = user guess position 4 (character) valid values: [RGBY]
+-code1 = code position 1 (character) valid values: [RGBY]
+-code2 = code position 2 (character) valid values: [RGBY]
+-code3 = code position 3 (character) valid values: [RGBY]
+-code4 = code position 4 (character) valid values: [RGBY]
+-nR = number of positions red (integer) valid values: [1-4]
+-nG = number of positions green (integer) valid values: [1-4]
+-nB = number of positions blue (integer) valid values: [1-4]
+-nY = number of positions yellow (integer) valid values: [1-4]
+nGuess = number of user guesses (maximum 10)
+nCorrect = number of correct colors in the correct position [1-4] (black pegs)
+nColors = number of correct colors in the incorrect position [1-4] (white pegs)
+
+3. Algorithm instructions (recipe)   ***INCOMPLETE***
+...
+## prompt user for their guess (e.g., RGBY) as a string
+## user inputs their guess
+## if userGuess1 = code1 then add 1 to number of correct positions
+## if userGuess2 = code2 then add 1 to number of correct positions
+## if userGuess3 = code3 then add 1 to number of correct positions
+## if userGuess4 = code4 then add 1 to number of correct positions
+if number of corrects = 4, break with number of guesses
+
+if any of the guesses are red, increment number of reds
+if any of the guesses are green, increment number of greens
+if any of the guesses are yellow, increment number of yellows
+if any of the guesses are blue, increment number of blues
+
+write score to file
+output previous lowest score
+
+4. Test cases (list purpose of each test case, any input values, and expected results) 
+
+Test case #1:
+Purpose: [simplest and expected test]: user guesses correctly on first try
+Input values: RGBY
+Expected results: That's correct!  You guessed it in 1 attempt!
+
+Generated guess: RGBY
+Reds: 1
+Greens: 1
+Blues: 1
+Yellows: 1
+
+Input: RGBY
+
+All the inputs match immediately, so the guess is immediately validated. 
+
+Test case #2:
+Purpose: incorrect guess
+Input values: 
+Expected results:  
+...
+Number of correct colors in correct position:
+Number of correct colors in incorrect position:
+You have ___ tries remaining.
+...
+
+
+

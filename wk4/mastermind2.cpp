@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <ctime>
-#include <iostream>
 #include <fstream>
+#include <iostream>
 using namespace std;
 
 int randColor(int randNumber) {
@@ -14,11 +14,34 @@ int randColor(int randNumber) {
   } else if (randNumber == 3) {
     return 'Y';
   } else {
-	  return 'Q';
-	  }
+    return 'Q';
+  }
 }
 
 int main() {
+  fstream scoresFile;
+  scoresFile.open("mastermind-scores.txt");
+  int size;
+  int* scores = new int[size];
+  int temp;
+  while (scoresFile.good()) {
+    scoresFile >> temp;
+    scores[size] = temp;
+    size++;
+  }
+
+  for (int i = 0; i < size; i++) {
+    for (int j = i + 1; j < size; j++) {
+      if (scores[i] > scores[j]) {
+        int temptwo = scores[i];
+        scores[i] = scores[j];
+        scores[j] = temptwo;
+      }
+    }
+  }
+
+  cout << "The previous best score was " << scores[0] << "\n";
+
   int numOfR = 0;
   int numOfG = 0;
   int numOfY = 0;
@@ -29,21 +52,16 @@ int main() {
   char color2 = randColor(rand() % 4);
   char color3 = randColor(rand() % 4);
   char color4 = randColor(rand() % 4);
-  
 
-ofstream scoresFile;
-scoresFile.open("mastermind-scores.txt");
-
-  
   if (color1 == 'R' || color2 == 'R' || color3 == 'R' || color4 == 'R') {
- numOfR++;	  
-} else if (color1 == 'Y' || color2 == 'Y' || color3 == 'Y' || color4 == 'Y') {
-	numOfY++;
-	} else if (color1 == 'G' || color2 == 'G' || color3 == 'G' || color4 == 'G') {
-	numOfG++; 
-	} else if (color1 == 'B' || color2 == 'B' || color3 == 'B' || color4 == 'B') { 
-	numOfB++;
-	}
+    numOfR++;
+  } else if (color1 == 'Y' || color2 == 'Y' || color3 == 'Y' || color4 == 'Y') {
+    numOfY++;
+  } else if (color1 == 'G' || color2 == 'G' || color3 == 'G' || color4 == 'G') {
+    numOfG++;
+  } else if (color1 == 'B' || color2 == 'B' || color3 == 'B' || color4 == 'B') {
+    numOfB++;
+  }
   //
   cout << color1 << color2 << color3 << color4;
   int numberOfGuesses = 0;
@@ -62,92 +80,91 @@ scoresFile.open("mastermind-scores.txt");
     cin >> userGuess3;
     cout << "Type your guess for the fourth position [R,G,B,Y]: ";
     cin >> userGuess4;
-    
-    //quit:
-      if (userGuess1 == 'Q' || userGuess2 == 'Q' || userGuess3 == 'Q' || userGuess4 == 'Q') {
-	  cout << "Thanks for playing!";
-	  break;
-	  }
-	  
+
+    // quit:
+    if (userGuess1 == 'Q' || userGuess2 == 'Q' || userGuess3 == 'Q' ||
+        userGuess4 == 'Q') {
+      cout << "Thanks for playing!";
+      break;
+    }
+
     // direct matches
     if (toupper(userGuess1) == color1) {
       cout << 'B';
       correct++;
-    } 
+    }
     if (toupper(userGuess2) == color2) {
       cout << 'B';
       correct++;
-    } 
-     if (toupper(userGuess3) == color3) {
-      cout << 'B';
-      correct++;
-    } 
-     if (toupper(userGuess4) == color4) {
+    }
+    if (toupper(userGuess3) == color3) {
       cout << 'B';
       correct++;
     }
-//correct
+    if (toupper(userGuess4) == color4) {
+      cout << 'B';
+      correct++;
+    }
+    // correct
     if (correct == 4) {
       cout << "\nYou guessed the code in " << numberOfGuesses + 1 << " tries!";
-scoresFile >> numberOfGuesses + 1 << "\n";
-
+      scoresFile << numberOfGuesses + 1 << "\n";
       break;
-
     }
 
     // red
     if ((toupper(userGuess1) == 'R') && numOfR > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess2) == 'R' && numOfR > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess3) == 'R' && numOfR > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess4) == 'R' && numOfR > 0) {
+    }
+    if (toupper(userGuess2) == 'R' && numOfR > 0) {
       cout << 'W';
     }
-    
+    if (toupper(userGuess3) == 'R' && numOfR > 0) {
+      cout << 'W';
+    }
+    if (toupper(userGuess4) == 'R' && numOfR > 0) {
+      cout << 'W';
+    }
+
     // green
     if ((toupper(userGuess1) == 'G') && numOfG > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess2) == 'G' && numOfG > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess3) == 'G' && numOfG > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess4) == 'G' && numOfG > 0) {
+    }
+    if (toupper(userGuess2) == 'G' && numOfG > 0) {
       cout << 'W';
     }
-    
+    if (toupper(userGuess3) == 'G' && numOfG > 0) {
+      cout << 'W';
+    }
+    if (toupper(userGuess4) == 'G' && numOfG > 0) {
+      cout << 'W';
+    }
+
     // blue
     if ((toupper(userGuess1) == 'B') && numOfB > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess2) == 'B' && numOfB > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess3) == 'B' && numOfB > 0) {
-      cout << 'W';
-    } 
-     if (toupper(userGuess4) == 'B' && numOfB > 0) {
+    }
+    if (toupper(userGuess2) == 'B' && numOfB > 0) {
       cout << 'W';
     }
-    
+    if (toupper(userGuess3) == 'B' && numOfB > 0) {
+      cout << 'W';
+    }
+    if (toupper(userGuess4) == 'B' && numOfB > 0) {
+      cout << 'W';
+    }
+
     // yellow
     if ((toupper(userGuess1) == 'Y') && numOfY > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess2) == 'Y' && numOfY > 0) {
+    }
+    if (toupper(userGuess2) == 'Y' && numOfY > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess3) == 'Y' && numOfY > 0) {
+    }
+    if (toupper(userGuess3) == 'Y' && numOfY > 0) {
       cout << 'W';
-    } 
-     if (toupper(userGuess4) == 'Y' && numOfY > 0) {
+    }
+    if (toupper(userGuess4) == 'Y' && numOfY > 0) {
       cout << 'W';
     }
   }
