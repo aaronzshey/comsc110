@@ -6,8 +6,10 @@
 
 // libraries
 #include <iostream>
+#include <fstream>
 using namespace std;
-
+#include <cstdlib>
+#include <ctime>
 // Programmer defined data types
 // NONE
 
@@ -27,6 +29,24 @@ int main() {
   string objective = "Objective goes here";
   string instructions = "User instructions go here";
   introduction(objective, instructions);
+
+const int MAX_SIZE = 200;
+int nSongs = 0;
+string songList[MAX_SIZE];
+ifstream songs;
+songs.open("songs.txt");
+
+while (songs.good()) {
+string temp;
+
+getline(songs, temp);
+cout << temp << "\n";
+
+}
+
+
+srand(time(0));
+
 
 }  // main
 
