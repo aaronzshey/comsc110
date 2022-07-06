@@ -1,0 +1,140 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): record student data using structs
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- each student's information:
+- [string] name
+- [string] city
+- [string] state
+- [int] zip code
+- [char] gender
+- [int] student id
+- [decimal] gpa
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. user input
+4. output data
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-Instructions:
+prompt "Name: "
+prompt "City: "
+prompt "State: "
+prompt "Zip code: "
+prompt "Gender [M/F]: "
+prompt "Student ID: "
+prompt "GPA: "
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- each student's information:
+- [string] name
+- [string] city
+- [string] state
+- [int] zip code
+- [char] gender
+- [int] student id
+- [decimal] gpa
+
+3. Algorithm instructions (recipe)
+***data
+10 create struct Student with fields name, city, state, address, 
+20 create three variables with type Student
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 call getStudents for the three variables
+50 call printStudents for the three variables
+999 END
+
+1000 function getStudents
+1020 output prompt "Name: "
+1030 input name
+1040 output prompt "City: "
+1050 input name
+1060 output prompt "State: "
+1070 input state
+1080 output prompt "Zip code"
+1090 input zip code
+1100 output prompt "Gender [M/F]: "
+1110 input gender
+1120 output prompt "Student ID: "
+1130 input id
+1140 output prompt "GPA: "
+1150 input gpa
+1160 assign variables and return struct
+
+2000 function getStudents
+2020 output label "Name: "
+2030 output name
+2040 output prompt "City: "
+2050 output name
+2060 output prompt "State: "
+2070 output state
+2080 output prompt "Zip code"
+2090 output zip code
+2100 output prompt "Gender [M/F]: "
+2110 output gender
+2120 output prompt "Student ID: "
+2130 output id
+2140 output prompt "GPA: "
+2150 output gpa
+2160 assign variables and return struct
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the algorithm works properly
+Algorithm instructions (recipe)
+***data
+10 create struct Student with fields name, city, state, address, 
+20 create three variables with type Student
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 call getStudents for the three variables
+50 call printStudents for the three variables
+999 END
+
+1000 function getStudents
+1020 output prompt "Name: "
+1030 input name
+1040 output prompt "City: "
+1050 input name
+1060 output prompt "State: "
+1070 input state
+1080 output prompt "Zip code"
+1090 input zip code
+1100 output prompt "Gender [M/F]: "
+1110 input gender
+1120 output prompt "Student ID: "
+1130 input id
+1140 output prompt "GPA: "
+1150 input gpa
+1160 assign variables and return struct
+
+2000 function getStudents
+2020 output label "Name: "
+2030 output name
+2040 output prompt "City: "
+2050 output name
+2060 output prompt "State: "
+2070 output state
+2080 output prompt "Zip code"
+2090 output zip code
+2100 output prompt "Gender [M/F]: "
+2110 output gender
+2120 output prompt "Student ID: "
+2130 output id
+2140 output prompt "GPA: "
+2150 output gpa
+2160 assign variables and return struct
+
+999 END
