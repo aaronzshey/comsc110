@@ -13,6 +13,8 @@ int suite;
 
 int main() {
   srand(time(0));
+  PlayingCard computerCard;
+  PlayingCard humanCard;
   int computerValue = (rand() % 12) + 2;
   int computerSuite = rand() % 3;
   int computerScore = computerValue + computerSuite;
