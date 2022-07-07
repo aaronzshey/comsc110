@@ -33,8 +33,18 @@ int main()
   int count = 0; // to count the number of nodes in the list
   int sum = 0; // to accumulate the total of all scores
   Score* p;
+  int max = 0;
+  int min = 999;
+  
   for (p = start; p; p = p->next)
   {
+    if (p->value > max) {
+    max = p->value;
+    }
+    
+    if (p-> value < min) {
+    min = p->value;
+    }
     sum += p->value;
     count++;
   }
@@ -48,5 +58,13 @@ int main()
   }
   else
     cout << "No values were entered.\n";
+  Score* k;
+  
+  for (k=start;k;k=k->next) {
+  
+  
+    
+  }
+  
   
 } // main 
