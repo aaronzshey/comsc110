@@ -5,7 +5,7 @@ using namespace std;
 struct Score {
 int score;
   Score* next;
-}
+};
 
 
 
@@ -24,7 +24,7 @@ int main()
   { 
     // read a score from the file 
    Score* aScore = new Score; 
-   getline(fin, aScore->score);
+   fin >>aScore->score;
     aScore->next = start;
     start = aScore;
   } // while 
@@ -39,14 +39,14 @@ int main()
   
   for (p = start; p; p = p->next)
   {
-    if (p->value > max) {
-    max = p->value;
+    if (p->score > max) {
+    max = p->score;
     }
     
-    if (p-> value < min) {
-    min = p->value;
+    if (p-> score < min) {
+    min = p->score;
     }
-    sum += p->value;
+    sum += p->score;
     count++;
   }
 
@@ -59,7 +59,7 @@ int main()
   Score* k;
   
   for (k=start;k;k=k->next) {
-  if (k->value > average) {
+  if (k->score > average) {
   
     numAboveAverage++;
   
