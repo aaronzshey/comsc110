@@ -1,7 +1,14 @@
 #include <fstream> 
 #include <iostream> 
 using namespace std; 
-  
+
+struct Score {
+int score;
+  Score* next;
+}
+
+
+
 int main() 
 { 
   ifstream fin; 
@@ -9,36 +16,37 @@ int main()
   if (!fin.good()) throw "I/O error"; 
   
   // create an empty list 
-  const int MAX_SCORES = 100; // list capacity 
-  int nScores = 0; // initially empty 
-  int score[MAX_SCORES]; 
+  Score* start = 0;
+ 
   
   // read and save the scores 
   while (fin.good()) 
   { 
     // read a score from the file 
-    int aScore; // temporary storage for new score
-    fin >> aScore; 
-    fin.ignore(1000, 10); 
-  
-    // add new score to list, if list is not full 
-    if (nScores < MAX_SCORES) 
-      score[nScores++] = aScore; 
+   Score* aScore = new Score; 
+   getline(fin, aScore->score);
+    aScore->next = start;
+    start = aScore;
   } // while 
   fin.close(); 
   
-  // find the average 
-  int i; // loop counter 
-  int scoreTotal = 0; 
-  for (i = 0; i < nScores; i++) 
-    scoreTotal += score[i]; 
-  double average = (double)scoreTotal / nScores; 
-  cout << "The average of " << nScores 
-    << " numbers is " << average << endl; 
+  int count = 0; // to count the number of nodes in the list
+  int sum = 0; // to accumulate the total of all scores
+  Score* p;
+  for (p = start; p; p = p->next)
+  {
+    sum += p->value;
+    count++;
+  }
+
   
-  // count number of scores > average 
-  int nGreater = 0; 
-  for (i = 0; i < nScores; i++) 
-    if (score[i] > average) nGreater++; 
-  cout << nGreater  << " scores are greater than the average." << endl; 
+    // output the result
+  if (count > 0)
+  {
+    double average = double(sum) / double(count);
+    cout << "The average of " << count << " scores is " << average << endl;
+  }
+  else
+    cout << "No values were entered.\n";
+  
 } // main 
