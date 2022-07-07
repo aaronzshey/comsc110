@@ -35,6 +35,7 @@ int main()
   Score* p;
   int max = 0;
   int min = 999;
+  int numAboveAverage = 0;
   
   for (p = start; p; p = p->next)
   {
@@ -51,17 +52,18 @@ int main()
 
   
     // output the result
-  if (count > 0)
-  {
+
     double average = double(sum) / double(count);
     cout << "The average of " << count << " scores is " << average << endl;
-  }
-  else
-    cout << "No values were entered.\n";
+
   Score* k;
   
   for (k=start;k;k=k->next) {
+  if (k->value > average) {
   
+    numAboveAverage++;
+  
+  }
   
     
   }
