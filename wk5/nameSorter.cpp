@@ -1,4 +1,4 @@
-// Objective:  template for C++ programs and to test code
+// Objective:  read and sort names from a file
 // Name: Aaron Shey 2027142
 // Course: COMSC-110-5003
 // Compiler: g++ - GNU C and C++ compiler
@@ -6,7 +6,9 @@
 
 // libraries
 #include <fstream>
+
 #include <iostream>
+
 using namespace std;
 
 // Programmer defined data types
@@ -23,10 +25,11 @@ void introduction(string objective, string instructions);
 
 // main program
 
-int main() {
+int main()
+{
   // user introduction
-  string objective = "Objective goes here";
-  string instructions = "User instructions go here";
+  string objective = "read and sort names from a file";
+  string instructions = "Type the name of the file in question";
   introduction(objective, instructions);
 
   const int MAX_NAMES = 5;
@@ -41,56 +44,70 @@ int main() {
 
   string temp;
   // read the values from file
-  while (friendsFile.good()) {
+  while(friendsFile.good())
+  {
     getline(friendsFile, temp);
     int sentinel = 1;
 
-    if (temp.length() == 0) {
+    if(temp.length() == 0)
+    {
       continue;
-    } else {
-      for (int i = 0; i < nNames; i++) {
-        if (temp == nameList[i]) {
+    }
+    else
+    {
+      for(int i = 0; i < nNames; i++)
+      {
+        if(temp == nameList[i])
+        {
           sentinel = 2;
         }
-      }  // for
+      } // for
 
-      if (sentinel != 2 && nNames < MAX_NAMES) {
+      if(sentinel != 2 && nNames < MAX_NAMES)
+      {
         // cout << "\n" << temp << "\n";
         nameList[nNames++] = temp;
-      }  // if
+      } // if
 
-    }  // else
+    } // else
 
-  }  // while
+  } // while
 
   string lowercaseNames[nNames];
 
   // convert everything to lowercase
-  for (int i = 0; i < nNames; i++) {
-    for (int j = 0; j < nameList[j].length() + 1; j++) {
+  for(int i = 0; i < nNames; i++)
+  {
+    for(int j = 0; j < nameList[j].length() + 1; j++)
+    {
       lowercaseNames[i] += tolower(nameList[i][j]);
     }
   }
 
   // sort
-  for (int i = 0; i < nNames; i++) {
-    for (int j = i + 1; j < nNames; j++) {
-      if (nameList[i] > nameList[j]) {
+  for(int i = 0; i < nNames; i++)
+  {
+    for(int j = i + 1; j < nNames; j++)
+    {
+      if(lowercaseNames[i] > lowercaseNames[j])
+      {
         // swap code
         string tTemp = nameList[i];
         nameList[i] = nameList[j];
         nameList[j] = tTemp;
-      }  // if
-    }    // for
-  }      // for
+      } // if
+    } // for
+  } // for
 
-  for (int i = 0; i < nNames; i++) {
-    cout << lowercaseNames[i] << "\n";
+  for(int i = 0; i < nNames; i++)
+  {
+    cout << nameList[i] << "\n";
   }
 
-}  // main
+} // main
 
-void introduction(string objective, string instructions) {
+void introduction(string objective, string instructions)
+{
   cout << "Objective: " << objective << "\n";
   cout << "Programmer: Aaron\n";
   cout << "Editor(s) used: geany\n";
@@ -98,4 +115,4 @@ void introduction(string objective, string instructions) {
   cout << "File: " << __FILE__ << endl;
   cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
-}  // introduction
+} // introduction

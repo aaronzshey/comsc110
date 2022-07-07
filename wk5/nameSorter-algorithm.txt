@@ -1,0 +1,74 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+sort names alphabetically read from a file
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-file containing names
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read names from file
+4. remove duplicates
+5. sort lowercased names alphabetically
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-names in alphabetical order, without any lowercasing
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-File containing 
+-[prompt]: Type the name of the file containing the names
+
+3. Algorithm instructions (recipe)
+***data
+5 create a list of strings that is max size 5
+10 prompt for file name
+20 open file 
+30 read each line 
+40 if the line is empty, go back to instruction 30
+50 if the line is valid, check if it is a duplicate
+60 if the line is not a duplicate, save it to the list
+70 go back to instruction 30 until the file is empty or 5 names have been read
+***processing:
+80 convert all the names into lowercase and fill another array
+90 if two names are greater in the lowercase version, swap the corresponding position in the original array
+100 continue until all the names are in correct order
+110 output the names in alphabetical order
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: the file is empty
+3. Algorithm instructions (recipe)
+***data
+5 create a list of strings that is max size 5
+10 prompt for file name
+20 open file 
+30 read each line 
+40 if the line is empty, go back to instruction 30
+50 all the lines are empty, so the program exits with blank output
+
+Test case #2: the file is full of random blank spaces
+3. Algorithm instructions (recipe)
+***data
+5 create a list of strings that is max size 5
+10 prompt for file name
+20 open file 
+30 read each line 
+40 if the line is empty, go back to instruction 30 <- at this step, all the empty lines are stripped out
+50 if the line is valid, check if it is a duplicate
+60 if the line is not a duplicate, save it to the list
+70 go back to instruction 30 until the file is empty or 5 names have been read
+***processing:
+80 convert all the names into lowercase and fill another array
+90 if two names are greater in the lowercase version, swap the corresponding position in the original array
+100 continue until all the names are in correct order
+110 output the names in alphabetical order
+
+
