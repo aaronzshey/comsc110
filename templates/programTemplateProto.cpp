@@ -28,7 +28,8 @@ int main() {
   string instructions = "User instructions go here";
   introduction(objective, instructions);
 
-}  // main
+}  // maingg
+
 
 void introduction(string objective, string instructions) {
   cout << "Objective: " << objective << "\n";

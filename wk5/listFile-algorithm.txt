@@ -1,0 +1,57 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+read and sort scores from a file
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-file containing scores
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read file from score
+4. sort scores
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-scores, from lowest to highest
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-scores read from file
+
+3. Algorithm instructions (recipe)
+***data
+10 read scores from scores.txt, skipping all empty lines
+20 fill array with scores
+25 if the score is less than 0 or greater than 100 don't add it to the file
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 sort scores 
+50 output scores in linear order
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the program exits correctly
+expected result: nothing
+***data
+10 read scores from scores.txt
+20 the file is empty, so the program exits immediately
+999 END
+
+Test case #2: ensure the program works correctly
+expected result: 50 51 52 53 60
+***data
+10 read scores from scores.txt, skipping all empty lines - 60 50 51 52 53 200
+20 fill array with scores
+25 if the score is less than 0 or greater than 100 don't add it to the file - 200 is skipped
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 sort scores 
+50 output scores in linear order - 50 51 52 53 60
+999 END

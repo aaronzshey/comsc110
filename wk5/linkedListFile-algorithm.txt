@@ -1,0 +1,81 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+read scores from a file and calculate the average, highest, lowest scores and number of scores greater than the average, using a linked list
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-scores.txt
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read scores from file
+4. move scores into a linked list
+5. calculate min, max, average, and number of scores and output
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-[label] Minimum: 
+-[label]Maximum:
+- [label]Average:
+- [label] (this many) scores are greater than average
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-scores.txt
+
+3. Algorithm instructions (recipe)
+***data
+10 open scores file
+20 set linked list to 0
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***processing
+40 for each score, add a new node to the beginning of the linked list, set the new node to the score, and set the next node to 0
+***calculation
+50 set min to 999999
+60 set max to 0
+70 set sum to 0
+80 set count to 0
+90 for each score, sum+=score, count++
+100 if (max < score) max = score;
+110 if (min > score) min = score;
+120 sum / count = average
+130 set numAboveAverage to 0;
+140 for each score, if (score > average) numAboveAverage++
+150 output all variables and appropiate labels
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: the file is empty
+***data
+10 open scores file
+20 set linked list to 0
+30 file is empty, so the program proceeds with no output
+
+
+Test case #2: 
+***data
+10 open scores file: scores.txt 
+20 set linked list to 0
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***processing
+40 for each score, add a new node to the beginning of the linked list, set the new node to the score, and set the next node to 0
+this produces a linked list with 12 items: [68, 88, 87, etc]
+***calculation
+50 set min to 999999
+60 set max to 0
+70 set sum to 0
+80 set count to 0
+90 for each score, sum+=score, count++
+100 if (max < score) max = score;
+110 if (min > score) min = score;
+120 sum / count = average
+130 set numAboveAverage to 0;
+140 for each score, if (score > average) numAboveAverage++
+150 output all variables and appropiate labels: min is 68, max is 88, average of 3 numbers is 81, there are 2 numbers above average
