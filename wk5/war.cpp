@@ -4,82 +4,60 @@ using namespace std;
 #include <cstdlib>
 #include <ctime>
 
+struct SuiteData {
+  string name;
+  int value;
+};
+
 struct PlayingCard {
+  int cardValue;
+  SuiteData suite;
+};
 
-int value;
-int suite;
-
-}
+string suite(int value);
 
 int main() {
-  srand(time(0));
-  PlayingCard computerCard;
-  PlayingCard humanCard;
-  int computerValue = (rand() % 12) + 2;
-  int computerSuite = rand() % 3;
-  int computerScore = computerValue + computerSuite;
+  char sentinel;
+  do {
+    cout << "Do you want to play a round? [y/n]";
+    cin >> sentinel;
+    cin.ignore(1000, 10);
+    cout << "\n";
 
-  cout << "Computer's card is a ";
-  // computer
-  if (computerValue == 11) {
-    cout << "Jack ";
-  } else if (computerValue == 12) {
-    cout << "Queen ";
-  } else if (computerValue == 13) {
-    cout << "King ";
-  } else if (computerValue == 14) {
-    cout << "Ace ";
-  } else {
-    cout << computerValue << " ";
-  }
-  cout << "of";
+    srand(time(0));
+    int computerSuiteV = rand() % 3;
+    PlayingCard computerCard = {
+        (rand() % 12) + 2, SuiteData{suite(computerSuiteV), computerSuiteV}};
 
-  if (computerSuite == 0) {
-    cout << " Spades";
-  } else if (computerSuite == 1) {
-    cout << " Diamonds";
-  } else if (computerSuite == 2) {
-    cout << " Hearts";
-  } else if (computerSuite == 3) {
-    cout << " Clubs";
-  }
-  cout << "\n\n";
+    int humanSuiteV = rand() % 3;
+    PlayingCard humanCard = {(rand() % 12 + 2),
+                             SuiteData{suite(humanSuiteV), humanSuiteV}};
 
-  int humanValue = (rand() % 12) + 2;
-  int humanSuite = rand() % 3;
-  int humanScore = humanValue + humanSuite;
+    int computerScore = computerCard.cardValue + computerCard.suite.value;
 
-  cout << "Human's card is a ";
-  // computer
-  if (humanValue == 11) {
-    cout << "Jack ";
-  } else if (humanValue == 12) {
-    cout << "Queen ";
-  } else if (humanValue == 13) {
-    cout << "King ";
-  } else if (humanValue == 14) {
-    cout << "Ace ";
-  } else {
-    cout << humanValue << " ";
-  }
-  cout << "of";
+    int humanScore = humanCard.cardValue + humanCard.suite.value;
 
-  if (humanSuite == 0) {
-    cout << " Spades";
-  } else if (humanSuite == 1) {
-    cout << " Diamonds";
-  } else if (humanSuite == 2) {
-    cout << " Hearts";
-  } else if (humanSuite == 3) {
-    cout << " Clubs";
-  }
-  cout << "\n\n";
+    if (humanScore < computerScore) {
+      cout << "I win!\n";
+    } else if (humanScore > computerScore) {
+      cout << "You win!\n";
+    } else if (humanScore == computerScore) {
+      cout << "Play again!\n";
+    }
 
-  if (humanScore < computerScore) {
-    cout << "I win!";
-  } else if (humanScore > computerScore) {
-    cout << "You win!";
-  } else if (humanScore == computerScore) {
-    cout << "Play again!";
-  }
+  } while (tolower(sentinel) == 'y');
 }
+
+string suite(int value) {
+  if (value == 0) {
+    return " Spades";
+  } else if (value == 1) {
+    return " Diamonds";
+  } else if (value == 2) {
+    return " Hearts";
+  } else if (value == 3) {
+    return " Clubs";
+  } else {
+    return NULL;
+  }
+}  // suite
