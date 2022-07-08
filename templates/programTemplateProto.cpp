@@ -28,7 +28,7 @@ int main() {
   string instructions = "User instructions go here";
   introduction(objective, instructions);
 
-}  // maingg
+}  // main
 
 
 void introduction(string objective, string instructions) {

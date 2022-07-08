@@ -2,40 +2,98 @@
 Full Name and Student ID Number: Aaron Shey 2021742
 Course and section: COMSC-110-5003
 
-1. Objective (1 sentence brief description of what this will do): 
+1. Objective (1 sentence brief description of what this will do): simulate the card game war
 
 2. Requirements (any and all requirements organized by input, processing, output, data):
 INPUT (any data items to be input): 
--
+-sentinel value: y or n
 
 PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
 1. data definitions
 2. user introduction
-3. 
+3. generate random values and suites for the computer and player card
+4. compare values and output win status
+
 
 OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
 -user introduction: introduction of objective, author, user instructions/rules
--
+-win, loss, or tie
+-play again?
 
 DATA (list of all data items: definition, data type, formatting, or any other specifications):
--
+-computer suite
+-computer card value
+-human suite
+-human card value
 
 3. Algorithm instructions (recipe)
 ***data
-10 set ...
-20
+10 create struct SuiteStruct with fields suite (string) and suitevalue (int)
+20 create struct playingcard, with fields value (int) and SuiteStruct
 ***introduction 
 30 output introduction: objective, author, instructions/rules
 ***
-40
+35 get sentinel
+36 if sentinel = n quit
+40 create humanCard, with type playingcard
+50 generate random number between 2 and 14 for humanCard's value
+60 generate another random number between 0 to 3 
+70 suite(random number between 0 to 3) = humanCard suiteStruct suite
+80 the same previous random number = humanCard suiteStruct 
+90 humanScore = humanCard value + humanCard suiteStruct value
+100 generate random number between 2 and 14 for computerCard's value
+110 generate another random number between 0 to 3 
+120 suite(random number between 0 to 3) = computerCard suiteStruct suite
+130 the same previous random number = computerCard suiteStruct 
+140 computerScore = computerCard value + computerCard suiteStruct value
+150 computerScore = computerCard + computerCard suiteStruct value
+160 compare computer score and human score and output result
+
+1000 function suite()
+1010 return 0 as Spades, 1 as Diamonds, 2 as Hearts, and 3 as Clubs
 
 999 END
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
 Test case #1: 
-10
+expected result: quit immediately
+***data
+10 create struct SuiteStruct with fields suite (string) and suitevalue (int)
+20 create struct playingcard, with fields value (int) and SuiteStruct
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+35 get sentinel
+36 if sentinel = n quit
+999 END
+
+Test case #2: ensure the program works correctly
+***data
+10 create struct SuiteStruct with fields suite (string) and suitevalue (int)
+20 create struct playingcard, with fields value (int) and SuiteStruct
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+35 get sentinel
+36 if sentinel = n quit
+40 create humanCard, with type playingcard
+50 generate random number between 2 and 14 for humanCard's value: 14
+60 generate another random number between 0 to 3: 3
+70 suite(random number between 0 to 3) = humanCard suiteStruct suite: Club
+80 the same previous random number = humanCard suiteStruct: 3
+90 humanScore = humanCard value + humanCard suiteStruct value: 17
+
+100 generate random number between 2 and 14 for computerCard's value: 2
+110 generate another random number between 0 to 3 : 0
+120 suite(random number between 0 to 3) = computerCard suiteStruct suite: spades
+130 the same previous random number = computerCard suiteStruct : 0
+140 computerScore = computerCard value + computerCard suiteStruct value: 2
+160 compare computer score and human score and output result: human wins!
+170 get sentinel
+180 sentinel = n
 
 999 END
 
-Test case #2: 
+1000 function suite()
+1010 return 0 as Spades, 1 as Diamonds, 2 as Hearts, and 3 as Clubs

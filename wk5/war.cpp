@@ -1,22 +1,47 @@
+// Objective:  simulate a game of the card game war
+// Name: Aaron Shey 2027142
+// Course: COMSC-110-5003
+// Compiler: g++ - GNU C and C++ compiler
+// Editor: vim
+
+// libraries
 #include <iostream>
 using namespace std;
 
 #include <cstdlib>
 #include <ctime>
 
+// Programmer defined data types
+// NONE
 struct SuiteData {
   string name;
   int value;
-};
+}; //SuiteData
 
 struct PlayingCard {
   int cardValue;
   SuiteData suite;
-};
+}; //PlayingCard
 
+// Special compiler dependent definitions
+// NONE
+
+// global constants/variables
+// NONE
+
+// Programmer defined functions
+void introduction(string objective, string instructions);
 string suite(int value);
 
+// main program
+
 int main() {
+  // user introduction
+  string objective = "Simulate a game of war";
+  string instructions = "Indicate if you want to keep playing";
+  introduction(objective, instructions);
+  cout << "\n\n";
+  
   char sentinel;
   do {
     cout << "Do you want to play a round? [y/n]";
@@ -46,7 +71,18 @@ int main() {
     }
 
   } while (tolower(sentinel) == 'y');
-}
+} //main
+
+
+void introduction(string objective, string instructions) {
+  cout << "Objective: " << objective << "\n";
+  cout << "Programmer: Aaron\n";
+  cout << "Editor(s) used: geany\n";
+  cout << "Compiler(s) used: g++\n";
+  cout << "File: " << __FILE__ << endl;
+  cout << "Instructions: " << instructions << endl;
+  cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
+}  // introduction
 
 string suite(int value) {
   if (value == 0) {
