@@ -1,0 +1,56 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+calculate a fibonacci sequence
+
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-index of sequence
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. start from 0 and calculate the fibonacci sequence up until the index given 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-fibonnaci sequence
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-
+
+3. Algorithm instructions (recipe)
+***data
+10 get user input index
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 while counter is less than user input
+40 print fib(user input)
+
+1000 function fib
+1010 accept index
+1020 calculate and return list of fibonacci numbers
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: input is 0 or 1
+expected result: 0 or 1
+10 get user input
+20 user input is 1
+30 output 1
+
+999 END
+
+Test case #2: input is 2
+10 get user input
+20 user input is 2
+30 output fib{0}: 1
+40 output fib (1): 1
+50 output fib(2): 2
+999 END
