@@ -13,10 +13,8 @@
 using namespace std;
 #include <cstdlib>
 #include <ctime>
-    // Programmer defined data types
-struct Song {
-  string name;
-}
+// Programmer defined data types
+// NONE
 
 // Special compiler dependent definitions
 // NONE
@@ -37,41 +35,56 @@ int main() {
 
   ifstream songs;
   songs.open("songs.txt");
+
   int i = 0;
-  deque<Song> songList;
+
+  deque <string> songList;
+
   // build list of songs
+
   while (songs.good()) {
-    Song temp;
-    getline(songs, temp.name);
+	  string temp;
+    getline(songs, temp);
+
     songList[i] = temp;
+
     i++;
   }  // while
 
   srand(time(0));
 
-  deque<Song> listOfFive;
+  deque <string> listOfFive;
+
   while (true) {
     char sentinel;
+
     cout << "Do you want to play a song? [y/n]: ";
+
     cin >> sentinel;
+
     cin.ignore(1000, 10);
+
     if (tolower(sentinel) == 'y') {
-      Song aSong = songList[((rand() % nSongs) + 1)];
+		
+      string aSong = songList[((rand() % songList.size()) + 1)];
 
       if (listOfFive.size() <= 5) {
         listOfFive.push_back(aSong);
+
       } else {
         listOfFive.pop_front();
+
         listOfFive.push_back(aSong);
       }
 
-for (int i = 0; int i < 5; i++) {
-
-
-}
+      for (int i = 0; i < listOfFive.size(); i++) {
+		  if (listOfFive[i] == aSong);
+      }
 
     } else {
+		
       break;
+      
     }
 
   }  // while

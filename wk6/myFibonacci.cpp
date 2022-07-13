@@ -28,23 +28,23 @@ int main() {
   string objective = "calculate fibonacci numbers";
   string instructions = "Type a number";
   introduction(objective, instructions);
-  
+
   int userInput;
   int i = 0;
   int final = 0;
   cout << "Enter an index [0 or greater]: ";
   cin >> userInput;
-  
+
   for (int i = 0; i <= userInput; i++) {
     cout << fib(i) << " ";
     final = fib(i);
-  } //for 
+  }  // for
   cout << "\n";
-  cout << "The Fibonacci number at index " << userInput << " is "<< final << "\n";
+  cout << "The Fibonacci number at index " << userInput << " is " << final
+       << "\n";
   cout << "\n";
-  
-} //main
 
+}  // main
 
 void introduction(string objective, string instructions) {
   cout << "Objective: " << objective << "\n";
@@ -62,4 +62,4 @@ int fib(int index) {
   } else {
     return (fib(index - 1) + fib(index - 2));
   }
-} //fib 
+}  // fib

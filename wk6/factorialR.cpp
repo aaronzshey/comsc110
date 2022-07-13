@@ -47,7 +47,6 @@ void introduction(string objective, string instructions) {
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 }  // introduction
 
-
 int factorial(int n) {
   if (n > 1) {
     return n * factorial(n - 1);
