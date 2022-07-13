@@ -25,13 +25,20 @@ int main() {
   string objective = "prompt the user for filenames";
   string instructions = "type the filenames requested";
   introduction(objective, instructions);
-
+  
+  //defaults
   string dFileIn = "fileContainingEmails.txt";
   string dFileOut = "copyPasteMyEmails.txt";
+  
+  //inputs
   string inName;
   string outName;
+  
+  //validation
   inName = getFileName(dFileIn, "input");
   outName = getFileName(dFileOut, "output");
+  
+  //printing
   cout << "Input file: " << inName << "\n";
   cout << "Output file: " << outName << "\n";
 }  // main
@@ -54,9 +61,9 @@ string getFileName(string def, string type) {
     getline(cin, inp);
 
     if (inp.length() == 0) {
-      return def;
+      return def; //exit if empty
     } else if (inp.length() > 4 && inp.substr(inp.length() - 4, 4) != ".txt") {
-      return inp;
+      return inp; //otherwise keep going until valid
     }
-  }
-}
+  }//while
+}//getFileName
