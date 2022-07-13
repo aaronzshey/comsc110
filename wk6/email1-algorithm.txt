@@ -22,15 +22,23 @@ DATA (list of all data items: definition, data type, formatting, or any other sp
 -
 
 3. Algorithm instructions (recipe)
-***data
-10 set ...
-20
-***introduction 
-30 output introduction: objective, author, instructions/rules
-***
-40
+5 output introduction and instruction
+6
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
 
-999 END
+
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
