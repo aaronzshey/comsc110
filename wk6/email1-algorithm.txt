@@ -3,27 +3,29 @@ Full Name and Student ID Number: Aaron Shey 2021742
 Course and section: COMSC-110-5003
 
 1. Objective (1 sentence brief description of what this will do): 
-Open a file and write to another file
+validate a file
 
 2. Requirements (any and all requirements organized by input, processing, output, data):
 INPUT (any data items to be input): 
--
+- file name
 
 PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
 1. data definitions
 2. user introduction
-3. 
+3. test if the file is valid - ends in .txt or longer than 5
+4. output defaults if invalid
 
 OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
 -user introduction: introduction of objective, author, user instructions/rules
--
+-[label] input file name:
+-[label] output file name:
 
 DATA (list of all data items: definition, data type, formatting, or any other specifications):
--
+-input
+-default files
 
 3. Algorithm instructions (recipe)
 5 output introduction and instruction
-6
 10 dFileName = "fileContainingEmails.txt"
 20  output a prompt to the console using dFileName and fileType
 30  input iFileName
@@ -42,9 +44,76 @@ DATA (list of all data items: definition, data type, formatting, or any other sp
 
 4. Test cases (list purpose of each test case, any input values, and expected results)
 
-Test case #1: 
-10
+Test case #1: no input
+expected outputs: defaults 
 
-999 END
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName: blank
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName: blank
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName: default
+110  output label for the output file name, and oFileName: default
+120  output a prompt to press ENTER key to continue
+130  input enterKey
 
-Test case #2: 
+
+Test case #2: only 1 valid input
+expected outputs: 1 default output, one input recorded
+
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName: x.txt
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName: blank
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName: x.txt
+110  output label for the output file name, and oFileName: default
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+
+Test case #3: 2 valid inputs:
+expected outputs: the 2 valid inputs
+
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName: x.txt
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName: y.txt
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName: x.txt
+110  output label for the output file name, and oFileName: y.txt
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+
+
+Test case #4: 2 invalid inputs:
+expected outputs: defaults
+
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName: x.tx, x.tt, x.txt 
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName: y.tx, y.tt, y.txt 
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName: x.txt
+110  output label for the output file name, and oFileName: y.txt
+120  output a prompt to press ENTER key to continue
+130  input enterKey
