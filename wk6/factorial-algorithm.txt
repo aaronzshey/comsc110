@@ -1,0 +1,85 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+calculate the factorial of a number
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-number to calculate the factorial with
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. cumulative multiply every integer between 1 and the number given, inclusive 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+- [label] the factorial of <input> is
+- [int] result of factorial calculation
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+- input: number to calculate factorial
+- output: factorial
+
+3. Algorithm instructions (recipe)
+***data
+10 prompt user to type in number
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 calculate factorial with a loop:
+40 set factorial to 1
+50 for every integer between 1 and input, cumulatively multiply the numbers
+60 if integer is 0, output 1
+70 output factorial with label 
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: user types in 1
+
+***data
+10 prompt user to type in number: 1
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 calculate factorial with a loop:
+40 set factorial to 1
+50 for every integer between 1 and input, cumulatively multiply the numbers
+60 if integer is 0, output 1
+70 output factorial with label: 1 
+
+999 END
+
+
+Test case #2: user input 0
+expected output: 1
+***data
+10 prompt user to type in number: 0
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 calculate factorial with a loop:
+40 set factorial to 1
+50 for every integer between 1 and input, cumulatively multiply the numbers
+60 if integer is 0, output 1 <- OUTPUT 1
+70 output factorial with label 
+
+999 END
+
+Test case #3: user input 2
+expected output: 2
+***data
+10 prompt user to type in number: 2
+***introduction 
+20 output introduction: objective, author, instructions/rules
+***
+30 calculate factorial with a loop:
+40 set factorial to 1
+50 for every integer between 1 and input, cumulatively multiply the numbers
+60 if integer is 0, output 1
+70 output factorial with label: 2 * 1 = 2, the factorial of 2 is 2 
+
+999 END

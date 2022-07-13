@@ -1,4 +1,4 @@
-// Objective: calculate factorials 
+// Objective: calculate factorials
 // Name: Aaron Shey 2027142
 // Course: COMSC-110-5003
 // Compiler: g++ - GNU C and C++ compiler
@@ -24,14 +24,14 @@ void introduction(string objective, string instructions);
 
 int main() {
   // user introduction
-  string objective = "calculate factorials"; 
+  string objective = "calculate factorials";
 
-  string instructions = "Type the number you want the factorial of";
+  string instructions = "Type the number you want the factorial of: ";
   introduction(objective, instructions);
-int inp = 0;
-  cout << "Enter the number you want to factorialize";
-cin >> inp;
-cin.ignore(1000,10);
+  int inp = 0;
+  cout << "Enter the number you want to factorialize: ";
+  cin >> inp;
+  cin.ignore(1000, 10);
   int factorial = 1;
 
   for (int i = 1; i < 10; i++) {
