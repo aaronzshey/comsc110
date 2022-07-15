@@ -25,8 +25,7 @@ struct Movie {
 
 // Programmer defined functions
 void introduction(string objective, string instructions);
-deque<Movie> inputMovies();
-void askMovie(deque<Movie> morbin);
+//deque<Movie> inputMovies();
 
 // main program
 
@@ -36,17 +35,22 @@ int main() {
   string instructions = "type the year you think the film was released";
   introduction(objective, instructions);
 
-cout << "mark";
-  deque<Movie> morbin = inputMovies();
-cout << "mark";
-  char sentinel = 'y';
-  do {
-    askMovie(morbin);
-
-    cout << "Do you want to play again? [y/n]: ";
-    cin >> sentinel;
-    cin.ignore(1000, 10);
-  } while (tolower(sentinel) == 'y');
+  int i = 0;
+  deque<Movie> output;
+  ifstream movieData;
+  movieData.open("movieData.txt");
+string aLine;
+int aNumber;
+  while (getline(movieData, aLine)) {
+	cout << "Film: " << aLine << "\n";
+	output[i].title = aLine;
+	movieData >> aNumber;
+	cout << "Year: " << aNumber << "\n";
+	output[i].year = aNumber;
+	getline(movieData, aLine);
+	i++;
+  }    // while
+//  deque<Movie> morbin = inputMovies();
 }  // main
 
 void introduction(string objective, string instructions) {
@@ -58,7 +62,7 @@ void introduction(string objective, string instructions) {
   cout << "Instructions: " << instructions << endl;
   cout << "Compiled: " << __DATE__ << " at " << __TIME__ << endl << endl;
 }  // introduction
-
+/*
 deque<Movie> inputMovies() {
   int i = 0;
   deque<Movie> output;
@@ -69,14 +73,8 @@ deque<Movie> inputMovies() {
     if (!movieData.good()) {
       break;
     } else {
-string temp;
-      getline(movieData, temp);
-output[i].title = temp;
-cout << "Title: " << output[i].title;
-int tempie;
-      movieData >> tempie;
-output[i].year = tempie;
-cout << "Year: " << output[i].year;
+      getline(movieData, output[i].title);
+      movieData >> output[i].year;
       movieData.ignore(1000, 10);
       movieData.ignore(1000, 10);
       i++;
@@ -85,17 +83,4 @@ cout << "Year: " << output[i].year;
   }    // while
   return output;
 }  // inputMovies
-
-void askMovie(deque<Movie> morbin) {
-  int guess;
-  srand(time(0));
-  Movie selection = morbin[rand() % morbin.size()];
-  cout << "What year was\"" << selection.title << "\"released?\n";
-  cin >> guess;
-  cin.ignore(1000, 10);
-  if (guess == selection.year) {
-    cout << "Good job, that's correct!\n";
-  } else {
-    cout << "Oops, its actually " << selection.year << "\n";
-  }
-}
+*/

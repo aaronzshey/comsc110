@@ -5,6 +5,8 @@
 // libraries
 #include <iostream>
 
+#include <fstream>
+
 using namespace std;
 
 // Programmer defined data types
@@ -19,6 +21,8 @@ using namespace std;
 // Programmer defined functions
 void introduction(string objective, string instructions);
 string getFileName(string def, string type);
+void processLine(string lineFromFile);
+void readFile(string iFileName);
 // main program
 
 int main()
@@ -39,29 +43,19 @@ int main()
   //validation
   inName = getFileName(dFileIn, "input");
   outName = getFileName(dFileOut, "output");
-  
-  //defaults
-  string dFileIn = "fileContainingEmails.txt";
-  string dFileOut = "copyPasteMyEmails.txt";
-  
-  //inputs
-  string inName;
-  string outName;
-  
-  //validation
-  inName = getFileName(dFileIn, "input");
-  outName = getFileName(dFileOut, "output");
-  
   //printing
   cout << "Input file: " << inName << "\n";
   cout << "Output file: " << outName << "\n";
+
+
+  readFile(inName);
 } // main
 
 void introduction(string objective, string instructions)
 {
   cout << "Objective: " << objective << "\n";
   cout << "Programmer: Aaron\n";
-  cout << "Editor(s) used: geany\n";
+  cout << "Editor(s) used: vim\n";
   cout << "Compiler(s) used: g++\n";
   cout << "File: " << __FILE__ << endl;
   cout << "Instructions: " << instructions << endl;
@@ -70,28 +64,52 @@ void introduction(string objective, string instructions)
 
 string getFileName(string def, string type)
 {
-  while(true)
+  while (true)
   {
     cout << "Enter " << type << " filename [default: " << def << "]: ";
 
     string inp;
     getline(cin, inp);
-
-    if(inp.length() == 0)
+    if (inp.length() == 0)
     {
       return def; //exit if empty
     }
-    else if(inp.length() > 4 && inp.substr(inp.length() - 4, 4) == ".txt")
+    else if (inp.length() > 4 && inp.substr(inp.length() - 4, 4) == ".txt")
     {
       return inp; //otherwise keep going until valid
     }
   } //while
 } //getFileName
 
-    if (inp.length() == 0) {
-      return def; //exit if empty
-    } else if (inp.length() > 4 && inp.substr(inp.length() - 4, 4) != ".txt") {
-      return inp; //otherwise keep going until valid
+void processLine(string lineFromFile)
+{
+  for (int i = 0; i < lineFromFile.size(); i++)
+  {
+    int numberOfAts = 0;
+    if (lineFromFile[i] == '@')
+    { //it's a char change to ' ' 
+      numberOfAts++;
+      cout << lineFromFile << "\n" << numberOfAts << " @s found" << "\n";
+      //break; 
     }
-  }//while
-}//getFileName
+  }
+}
+
+void readFile(string iFileName)
+{
+  ifstream fin;
+  fin.open(iFileName);
+  while (fin.good())
+  {
+    if (!fin.good())
+    {
+      break;
+    }
+    else
+    {}
+    string temp;
+    getline(fin, temp);
+    //cout << "temp" << "\n";
+    processLine(temp);
+  }
+};
