@@ -7,8 +7,8 @@
 // libraries
 #include <deque>
 #include <fstream>
-#include <string>
 #include <iostream>
+#include <string>
 
 using namespace std;
 #include <cstdlib>
@@ -33,7 +33,6 @@ int main() {
   string instructions = "press y or n";
   introduction(objective, instructions);
 
-cout << "mark";
   ifstream songs;
   songs.open("songs.txt");
 
@@ -46,7 +45,7 @@ cout << "mark";
     string temp;
     getline(songs, temp);
 
-    songList[i] = temp;
+    songList.push_back(temp);
 
     i++;
   }  // while
@@ -65,7 +64,7 @@ cout << "mark";
     cin.ignore(1000, 10);
 
     if (tolower(sentinel) == 'y') {
-      string aSong = songList[((rand() % songList.size()) + 1)];
+      string aSong = songList[((rand() % songList.size()))];
 
       if (listOfFive.size() <= 5) {
         listOfFive.push_back(aSong);
@@ -78,10 +77,10 @@ cout << "mark";
 
       for (int i = 0; i < listOfFive.size(); i++) {
         if (listOfFive[i] == aSong) {
-          aSong = songList[((rand() % songList.size()) + 1)];
+          aSong = songList[((rand() % songList.size()))];
         }
       }
-cout << "\n" << aSong << "\n";
+      cout << "\n" << aSong << "\n";
     } else {
       break;
     }

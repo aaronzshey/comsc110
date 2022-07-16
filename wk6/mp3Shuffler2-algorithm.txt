@@ -1,0 +1,77 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+simulate an mp3 shuffling music
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-songs.txt: containing all the songs
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. sentinel value: y or n
+4. generate a random number between 0 and the number of songs to pick a random song
+5. if the song was previously selected in the last 5 plays, choose a different song to play 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-randomly selected song
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-file containing list of songs
+-list containing all the songs
+-list of five previously selected songs
+
+3. Algorithm instructions (recipe)
+***data
+5 create an empty list: five previous songs
+10 set input file to songs.txt
+20 read songs to list of songs
+30 set size of list equal to number of songs
+***introduction 
+40 output introduction: objective, author, instructions/rules
+***
+50 output if you still want to continue
+60 get user input: y or n
+70 if user input == y pick a random song and jump to instruction 50
+80 if the list of five previous songs is less than 5, add the song to the list
+90 otherwise, remove the first element and push the latest song to the end
+100 if the random song is in the list of songs, choose a different song
+110 if user input != y exit 
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: ensure the algorithm works properly
+***data
+5 create an empty list: five previous songs
+10 set input file to songs.txt
+20 read songs to list of songs
+30 set size of list equal to number of songs
+***introduction 
+40 output introduction: objective, author, instructions/rules
+***
+50 output if you still want to continue
+60 get user input: y or n
+70 if user input == y pick a random song and jump to instruction 50
+80 if the list of five previous songs is less than 5, add the song to the list
+90 otherwise, remove the first element and push the latest song to the end
+100 if the random song is in the list of songs, choose a different song: the song was the first selected, so it is output as normal
+110 if user input != y exit 
+
+999 END
+
+
+Test case #2: the file is empty
+***data
+5 create an empty list: five previous songs
+10 set input file to songs.txt
+20 read songs to list of songs
+30 set size of list equal to number of songs
+***introduction 
+40 output introduction: objective, author, instructions/rules
+50 the file is empty, so the program exists
