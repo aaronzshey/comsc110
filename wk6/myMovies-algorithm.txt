@@ -1,0 +1,98 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+make a simple movie guessing game
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+-movies.txt, containing movie title, release year, and then a blank line
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. read movie title and year and save to an object
+4. form a list of the movie objects 
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-[prompt] What year was [movie title] released?
+-[char] sentinel, y or n
+-[response] Sorry, the correct release year was [release year]
+-[response] That's correct!
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-movies
+-list of movie objects
+-user input - year
+-user input - sentinel
+
+3. Algorithm instructions (recipe)
+***data
+10 create an object Movie with items title [string] and year [number]
+20 create a mutable list with each element being type Movie
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 open movies.txt
+50 read first line and save to title
+60 read second line and save to year
+70 skip blank line
+80 continue until end of file is reached
+90 pick a random location in the list of movies
+100 output movie title and ask when it was released
+110 input user guess
+120 if the user guess matches the year, output correct
+130 else, output wrong
+140 prompt to continue playing
+
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: user doesn't want to play
+expected result: exits immediately 
+***data
+10 create an object Movie with items title [string] and year [number]
+20 create a mutable list with each element being type Movie
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 open movies.txt
+50 read first line and save to title
+60 read second line and save to year
+70 skip blank line
+80 continue until end of file is reached
+90 pick a random location in the list of movies
+100 output movie title and ask when it was released
+110 input user guess
+120 if the user guess matches the year, output correct
+130 else, output wrong
+140 prompt to continue playing: user types n, end
+
+
+
+
+Test case #2: user guesses wrong once: 
+***data
+10 create an object Movie with items title [string] and year [number]
+20 create a mutable list with each element being type Movie
+***introduction 
+30 output introduction: objective, author, instructions/rules
+***
+40 open movies.txt
+50 read first line and save to title
+60 read second line and save to year
+70 skip blank line
+80 continue until end of file is reached
+90 pick a random location in the list of movies
+100 output movie title and ask when it was released: "When was Morbius released?" 
+110 input user guess: 2022
+120 if the user guess matches the year, output correct: Correct!
+130 else, output wrong
+140 prompt to continue playing
+
+
+999 END

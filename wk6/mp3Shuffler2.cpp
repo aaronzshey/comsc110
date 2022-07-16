@@ -7,7 +7,7 @@
 // libraries
 #include <deque>
 #include <fstream>
-
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -33,17 +33,17 @@ int main() {
   string instructions = "press y or n";
   introduction(objective, instructions);
 
+cout << "mark";
   ifstream songs;
   songs.open("songs.txt");
 
   int i = 0;
 
-  deque <string> songList;
-
+  deque<string> songList;
   // build list of songs
 
   while (songs.good()) {
-	  string temp;
+    string temp;
     getline(songs, temp);
 
     songList[i] = temp;
@@ -53,7 +53,7 @@ int main() {
 
   srand(time(0));
 
-  deque <string> listOfFive;
+  deque<string> listOfFive;
 
   while (true) {
     char sentinel;
@@ -65,7 +65,6 @@ int main() {
     cin.ignore(1000, 10);
 
     if (tolower(sentinel) == 'y') {
-		
       string aSong = songList[((rand() % songList.size()) + 1)];
 
       if (listOfFive.size() <= 5) {
@@ -78,13 +77,13 @@ int main() {
       }
 
       for (int i = 0; i < listOfFive.size(); i++) {
-		  if (listOfFive[i] == aSong);
+        if (listOfFive[i] == aSong) {
+          aSong = songList[((rand() % songList.size()) + 1)];
+        }
       }
-
+cout << "\n" << aSong << "\n";
     } else {
-		
       break;
-      
     }
 
   }  // while
