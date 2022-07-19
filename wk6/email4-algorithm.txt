@@ -1,0 +1,185 @@
+@copyrighted 1999 Valerie Colber
+Full Name and Student ID Number: Aaron Shey 2021742
+Course and section: COMSC-110-5003
+
+1. Objective (1 sentence brief description of what this will do): 
+validate a file
+
+2. Requirements (any and all requirements organized by input, processing, output, data):
+INPUT (any data items to be input): 
+- file name
+
+PROCESSING (list of significant parts of the objective that will become the list of code blocks in program):
+1. data definitions
+2. user introduction
+3. test if the file is valid - ends in .txt or longer than 5
+4. output defaults if invalid
+5. read numbers of @ characters in each line and output
+6. collect number of @s
+7. parse emails and output number of emails 
+8. if the email was previously found, don't output it
+9. make a list of all the non-duplicate emails found and output them
+
+OUTPUT (list of anything output: introduction, data items, labels, prompts) : 
+-user introduction: introduction of objective, author, user instructions/rules
+-[label] input file name:
+-[label] output file name:
+-[label] Number of @s:
+-[label] [number of emails] emails found. 
+
+DATA (list of all data items: definition, data type, formatting, or any other specifications):
+-input
+-default files
+-lines with @s
+-location of emails
+
+3. Algorithm instructions (recipe)
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an email address (an @ and a period) are encountered, nEmails++ and output the email address
+160 if the email was previously recorded, don't save it to a list of emails
+170 otherwise, do
+180 output list of emails
+
+999 END
+
+4. Test cases (list purpose of each test case, any input values, and expected results)
+
+Test case #1: one @ is encountered
+3. Algorithm instructions (recipe)
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an @ is encountered, numberOfAs++ and output line -> line is output, with 1 @
+
+
+Test case 2: 2 @s are encountered on the line
+3. Algorithm instructions (recipe)
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileNamei
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an @ is encountered, numberOfAs++ and output line -> the line is output twice, first with 1 @ found, and then again with 2 @s found
+
+
+Test case #3: no @s are found
+3. Algorithm instructions (recipe)
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an @ is encountered, numberOfAs++ and output line -> programs exits with no output
+
+
+Test case #4: @s are found, but no periods. 
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an email address (an @ and a period) are encountered, nEmails++ and output the email address
+160 While @s were found, no .s were found, so no emails are output
+999 END
+
+Test case #5: emails are found
+expected output: the emails found
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an email address (an @ and a period) are encountered, nEmails++ and output the email address
+160: the emails found are output, along with the number
+
+999 END
+
+Test case#6: a duplicate email is found
+expected output: only 1 email is printed
+5 output introduction and instruction
+10 dFileName = "fileContainingEmails.txt"
+20  output a prompt to the console using dFileName and fileType
+30  input iFileName
+40  if iFileName is not valid, output feedback re-input
+50  if length of iFileName is 0, then iFileName = dFileName and dFileName = "copyPasteMyEmails.txt", else dFileName = iFileName
+60  output a prompt to the console using dFileName and fileType
+70  input oFileName
+80  if oFileName is not valid, output feedback and re-input
+90  if length of oFilename is 0, then oFileName = dFilename
+100  output label for the input file name, and iFileName
+110  output label for the output file name, and oFileName
+120  output a prompt to press ENTER key to continue
+130  input enterKey
+140 read input file
+150 iterate through each line: each time an email address (an @ and a period) are encountered, nEmails++ and output the email address
+160 if the email was previously recorded, don't save it to a list of emails
+170 otherwise, do: email was previously recorded
+180 output list of emails: only one email is output
+
+999 END
